@@ -73,4 +73,9 @@ If you want to add a Logout feature, all you need to do it remove the session st
 sessionStorage.removeItem("activeUser")
 ```
 
+## Stretch Goals
+1. Private chat messages
+1. Friend requests, and the ability to reject or accept them
+1. Real time chat updates. If a user in one tab writes a chat message, a user logged in on another tab [will immediately see that chat message](https://www.w3schools.com/jsreF/event_storage_storagearea.asp)
+
 
