@@ -44,7 +44,7 @@ To start you off, here's an example of what the resources in your API should loo
 ### Friends
 
 ```json
-{ "connectionId": 1, "userId": 1, "otherFriendId": 3 }
+{ "id": 1, "userId": 1, "otherFriendId": 3 }
 ```
 
 ### Tasks
@@ -73,8 +73,4 @@ If you want to add a Logout feature, all you need to do it remove the session st
 sessionStorage.removeItem("activeUser")
 ```
 
-## Visual Feature List
 
-To help you along, here is a visualization of the features, and behaviors of the application to get you started.
-
-![nutshell features](./Nutshell.png)
