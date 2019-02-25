@@ -1,8 +1,8 @@
 # Nutshell: The Information Dashboard
 
-Nutshell is a new product offering that you have been tasked with building. It's a dashboard for people to use to organize their daily tasks, events, news article, friends, and chat messages.
+You've been hired by a product company that builds productivity apps. For your first week on the job, you've been put on a team to build a new product called Nutshell. It's a one-stop dashboard for people to organize their daily tasks, events, news article, friends, and chat messages.
 
-You will be utilizing all of the skills and concepts that you've learned up to this point in the course.
+You will be using all of the skills and concepts that you've learned up to this point in the course.
 
 1. Functions
 1. Databases/API
