@@ -49,13 +49,11 @@ To start you off, here's an example of what the resources in your API should loo
 ### Tasks
 
 ```json
-{ "id": 1, "userId": 3, "task": "Take out garbage" }
+{ "id": 1, "userId": 3, "task": "Take out garbage", "completed": "true" }
 ```
 
 ## Professional Requirements
-
-1. All teammates must be using Webpack
-1. Each module should have a comment at the top with the following info: author(s) and purpose of module
+1. Each module should have a comment at the top with the following info: authors and purpose of module
 1. The README for your project should include instructions on how another person can download and run the application
 
 ## How to Handle Authentication
@@ -63,18 +61,13 @@ To start you off, here's an example of what the resources in your API should loo
 You will be using session storage to keep track of which user has logged into Nutshell. When the user fills out the registration form, you will POST their username and password to the `users` collection in your API. You will then immediately take the `id` of the object in the response and save it to session storage.
 
 ```js
-localStorage.setItem("activeUser", user.id)
+sessionStorage.setItem("activeUser", user.id)
 ```
 
 If you want to add a Logout feature, all you need to do it remove the session storage item.
 
 ```js
-localStorage.removeItem("activeUser")
+sessionStorage.removeItem("activeUser")
 ```
-
-## Stretch Goals
-1. Private chat messages
-1. Friend requests, and the ability to reject or accept them
-1. Real time chat updates. If a user in one tab writes a chat message, a user logged in on another tab [will immediately see that chat message](https://www.w3schools.com/jsreF/event_storage_storagearea.asp)
 
 
