@@ -1,65 +1,116 @@
 {
-    "users":[
-        {
-            "id": 1,
-            "email": "barry@email.com",
-            "username": "user1",
-            "password": "abc123"
-        },
-        {
-            "id": 2,
-            "email": "mike@email.com",
-            "username": "user2",
-            "password": "abc123"
-        },
-        {
-            "id": 3,
-            "email": "dylan@email.com",
-            "username": "user3",
-            "password": "abc123"
-        },
-        {
-            "id": 4,
-            "email": "swathi@email.com",
-            "username": "user4",
-            "password": "abc123"
-        }
-    ],
-    "articles": [
-        {
-            "id": 1,
-            "title": "Coronavirus: Health workers face violent attacks in Mexico",
-            "url": "https://www.bbc.com/news/world-latin-america-52676939",
-            "synopsis": "coronavirus is bad",
-            "date": "2020/05/18",
-            "userId": 3
-        }
-    ],
-    "tasks": [
-        {
-            "id": 1,
-            "taskName": "Chores",
-            "dueDate": "2020/05/21",
-            "isCompleted": false,
-            "userId": 1
-        }
-    ],
-    "events": [
-        {
-            "id": 1,
-            "name": "Ball",
-            "date": "2020/05/21",
-            "location": "Washington D.C.",
-            "userId": 4
-        }
-
-    ],
-    "messages": [
-        {
-            "id":1,
-            "userId": 2,
-            "message": "Help! I'm trapped inside a program.",
-            "time": "2020/05/18"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "email": "barry@email.com",
+      "username": "user1",
+      "password": "abc123"
+    },
+    {
+      "id": 2,
+      "email": "mike@email.com",
+      "username": "user2",
+      "password": "abc123"
+    },
+    {
+      "id": 3,
+      "email": "dylan@email.com",
+      "username": "user3",
+      "password": "abc123"
+    },
+    {
+      "id": 4,
+      "email": "swathi@email.com",
+      "username": "user4",
+      "password": "abc123"
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "title": "Coronavirus: Health workers face violent attacks in Mexico",
+      "url": "https://www.bbc.com/news/world-latin-america-52676939",
+      "synopsis": "coronavirus is bad",
+      "date": "2020/05/18",
+      "userId": 3
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "taskName": "Chores",
+      "dueDate": "2020/05/21",
+      "isCompleted": false,
+      "userId": 1
+    }
+  ],
+  "events": [
+    {
+      "id": 4,
+      "name": "Relay for Life",
+      "date": "2020-05-31",
+      "time": "20:00",
+      "location": "Springfield, Illinois",
+      "description": "Charity Event- Gala"
+    },
+    {
+      "id": 9,
+      "name": "American Red Cross",
+      "date": "2020-05-30",
+      "time": "12:00",
+      "location": "Community Center",
+      "description": "Local High School holding a blood drive",
+      "userId": 4
+    },
+    {
+      "id": 10,
+      "name": "Capstone Presentation",
+      "date": "2020-06-29",
+      "time": "08:00",
+      "location": "Virtual-Remote",
+      "description": "Virtual Capstone presentation through Zoom"
+    },
+    {
+      "name": "Masquerade",
+      "date": "2020-04-25",
+      "location": "City Hall",
+      "description": "Formal event to raise money for the city",
+      "id": 11,
+      "userId": 4,
+      "time": "12:00"
+    },
+    {
+      "id": 12,
+      "name": "Hike",
+      "date": "2020-07-13",
+      "time": "12:00",
+      "location": "Fayetteville, WV",
+      "description": "Nature hike through paved trails"
+    },
+    {
+      "name": "Quiz",
+      "date": "2020-01-26",
+      "location": "Classroom A",
+      "description": "Quiz on whether code works as anticipated",
+      "id": 13,
+      "userId": 4,
+      "time": "12:00"
+    },
+    {
+      "id": 14,
+      "name": "Trail Run",
+      "date": "2020-05-31",
+      "time": "14:00",
+      "location": "State Park",
+      "description": "5K afternoon trail run "
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 2,
+      "message": "Help! I'm trapped inside a program.",
+      "time": "2020/05/18"
+    }
+  ]
 }

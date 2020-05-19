@@ -1,0 +1,18 @@
+#output-container{
+    margin: 1em;
+    padding: 1em;
+}
+.card{
+    margin: 1em;
+    padding: 1em;
+    width: 50%;
+}
+article:first-child{
+    background-color: yellow;
+    padding: 1em;
+    font-weight: bolder;
+    font-size: larger;
+    border-style: ridge;
+    border-color: grey;
+    border-width: 1em;
+}
