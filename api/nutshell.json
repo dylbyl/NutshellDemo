@@ -1,65 +1,104 @@
 {
-    "users":[
-        {
-            "id": 1,
-            "email": "barry@email.com",
-            "username": "user1",
-            "password": "abc123"
-        },
-        {
-            "id": 2,
-            "email": "mike@email.com",
-            "username": "user2",
-            "password": "abc123"
-        },
-        {
-            "id": 3,
-            "email": "dylan@email.com",
-            "username": "user3",
-            "password": "abc123"
-        },
-        {
-            "id": 4,
-            "email": "swathi@email.com",
-            "username": "user4",
-            "password": "abc123"
-        }
-    ],
-    "articles": [
-        {
-            "id": 1,
-            "title": "Coronavirus: Health workers face violent attacks in Mexico",
-            "url": "https://www.bbc.com/news/world-latin-america-52676939",
-            "synopsis": "coronavirus is bad",
-            "date": "2020/05/18",
-            "userId": 3
-        }
-    ],
-    "tasks": [
-        {
-            "id": 1,
-            "taskName": "Chores",
-            "dueDate": "2020/05/21",
-            "isCompleted": false,
-            "userId": 1
-        }
-    ],
-    "events": [
-        {
-            "id": 1,
-            "name": "Ball",
-            "date": "2020/05/21",
-            "location": "Washington D.C.",
-            "userId": 4
-        }
-
-    ],
-    "messages": [
-        {
-            "id":1,
-            "userId": 2,
-            "message": "Help! I'm trapped inside a program.",
-            "time": "2020/05/18"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "email": "barry@email.com",
+      "username": "user1",
+      "password": "abc123"
+    },
+    {
+      "id": 2,
+      "email": "mike@email.com",
+      "username": "user2",
+      "password": "abc123"
+    },
+    {
+      "id": 3,
+      "email": "dylan@email.com",
+      "username": "user3",
+      "password": "abc123"
+    },
+    {
+      "id": 4,
+      "email": "swathi@email.com",
+      "username": "user4",
+      "password": "abc123"
+    }
+  ],
+  "articles": [
+    {
+      "title": "Stocks mixed as Fed and Treasury chiefs testify: May 19, 2020",
+      "url": "https://www.cnn.com/business/live-news/stock-market-news-051820-duplicate-2/index.html",
+      "synopsis": "hiiii",
+      "date": "2020/5/19",
+      "tags": [
+        "Stocks",
+        "asd"
+      ],
+      "userId": 3,
+      "id": 2
+    },
+    {
+      "title": "Coronavirus: Health workers face violent attacks in Mexico",
+      "url": "https://www.bbc.com/news/world-latin-america-52676939",
+      "synopsis": "coronavirus is bad",
+      "date": "2020/5/19",
+      "tags": [
+        "COVID-19",
+        "Mexico"
+      ],
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "title": "asd",
+      "url": "asd",
+      "synopsis": "asd",
+      "date": "2020/5/19",
+      "tags": [
+        "asd",
+        "asd"
+      ],
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "title": "asd",
+      "url": "asd",
+      "synopsis": "asd",
+      "date": "2020/5/19",
+      "userId": "1",
+      "tags": [
+        "asdasd",
+        "asdasd"
+      ],
+      "id": 5
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "taskName": "Chores",
+      "dueDate": "2020/05/21",
+      "isCompleted": false,
+      "userId": 1
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "name": "Ball",
+      "date": "2020/05/21",
+      "location": "Washington D.C.",
+      "userId": 4
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 2,
+      "message": "Help! I'm trapped inside a program.",
+      "time": "2020/05/18"
+    }
+  ]
 }
