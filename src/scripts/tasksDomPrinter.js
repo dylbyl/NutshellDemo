@@ -15,9 +15,9 @@ const tasksPageHTML = () => {
 const formatSingleTaskHTMLElement = (task) => {
     return `
     <div class="single-task single-task-${task.id}" id="single-task-${task.id}">
-    <h3 class="single-task-heading">
+    <h3 class="single-task-heading"><a class="task-name-link" id="task-name-link-${task.id}" href="#">
         ${task.taskName}
-    </h3>
+    </a></h3>
     <p class="single-task-date">
         Date: ${task.dueDate}
     </p>
@@ -54,6 +54,19 @@ newTaskForm() {
       <input type="date" class="task-date" id="task-date" name="task-date">
     </form>
     <button class="task-submit-btn" id="task-submit-btn">Submit</button>
+  </div>
+    `
+},
+
+//Edit form that is injected into DOM when a task name is clicked
+editTaskForm(task) {
+    return `
+    <div class="task-form-container" id="task-form-container">
+    <form class="task-form" id="task-form">
+      <input type="text" class="task-name" id="task-name" placeholder="${task.taskName}">
+      <p>Date: ${task.dueDate}</p>
+    </form>
+    <button class="task-save-btn" id="task-save-btn">Save</button>
   </div>
     `
 }

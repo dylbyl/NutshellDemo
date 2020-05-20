@@ -11,9 +11,7 @@
 
 const tasksAPIManager = {
    
-
     //Fetch all of the tasks from nutshell.json
-
     tasksFetch(idOfUser) {
         return fetch(`http://localhost:8088/tasks?userId=${idOfUser}`)
             .then((r) => r.json())
@@ -38,6 +36,10 @@ const tasksAPIManager = {
             },
             body: JSON.stringify({ "isCompleted": true })
         })
+    },
+    singleTaskFetch(taskId) {
+        return fetch(`http://localhost:8088/tasks?id=${taskId}`)
+        .then((r) => r.json())
     }
 }
 
