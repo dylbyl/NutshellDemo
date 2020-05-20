@@ -12,7 +12,15 @@ article:first-child{
     padding: 1em;
     font-weight: bolder;
     font-size: larger;
-    border-style: ridge;
-    border-color: grey;
-    border-width: 1em;
+    border: 1em ridge grey;
+}
+#event-form{
+    border: 5px ridge rgb(0, 195, 255);
+    margin: 1em;
+    padding: 1em;
+    width: 30%;
+    font-weight: bold;
+}
+#add-event-btn{
+    margin-left: 9em;
 }
