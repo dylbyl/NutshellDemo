@@ -6,6 +6,7 @@ const event_eventListener = {
         document.querySelector("#events-page").addEventListener("click", function(){
             if(event.target.id === "events-page"){
                 // event_domPrinter.createLoginBar()
+                event_domPrinter.createPageHeader()
                 document.querySelector("#output-container").innerHTML += event_domPrinter.createNewEventForm()
                 event_domPrinter.createEventsContainer()
                 event_apiManager.getAllEvents()

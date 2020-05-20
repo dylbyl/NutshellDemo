@@ -49,6 +49,7 @@
       "id": 4,
       "name": "Relay for Life",
       "date": "2020-05-31",
+      "time": "20:00",
       "location": "Springfield, Illinois",
       "description": "Charity Event- Gala"
     },
@@ -56,14 +57,15 @@
       "id": 9,
       "name": "American Red Cross",
       "date": "2020-05-30",
+      "time": "12:00",
       "location": "Community Center",
-      "description": "Local High School holding a blood drive",
-      "userId": 4
+      "description": "Local High School holding a blood drive"
     },
     {
       "id": 10,
       "name": "Capstone Presentation",
       "date": "2020-06-29",
+      "time": "08:00",
       "location": "Virtual-Remote",
       "description": "Virtual Capstone presentation through Zoom"
     },
@@ -78,7 +80,8 @@
     {
       "id": 12,
       "name": "Hike",
-      "date": "2020-07-13",
+      "date": "2020-07-31",
+      "time": "09:00",
       "location": "Fayetteville, WV",
       "description": "Nature hike through paved trails"
     },
@@ -94,6 +97,7 @@
       "id": 14,
       "name": "Trail Run",
       "date": "2020-05-31",
+      "time": "14:00",
       "location": "State Park",
       "description": "5K afternoon trail run "
     },
@@ -101,6 +105,7 @@
       "id": 15,
       "name": "Homecoming",
       "date": "2020-07-31",
+      "time": "18:00",
       "location": "City Park",
       "description": "5K/Half Marathon race, food cart festival, fireworks, boat race"
     },
@@ -108,8 +113,17 @@
       "id": 17,
       "name": "Milkshake Bonanza",
       "date": "2020-05-22",
+      "time": "17:00",
       "location": "Huntington, WV",
       "description": "A grand adventure around the land of Huntington, WV to see where we can find the best milkshake (and also just enjoy milkshakes because TGIF)"
+    },
+    {
+      "name": "Birthday Party",
+      "date": "2020-06-29",
+      "time": "17:00",
+      "location": "Mary's apartment",
+      "description": "Surprise birthday party for a friend",
+      "id": 18
     }
   ],
   "messages": [

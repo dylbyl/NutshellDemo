@@ -5,7 +5,13 @@ const event_apiManager = {
         return fetch(`http://localhost:8088/events`)
         .then(r => r.json())
         .then(parsedEvents => {
-            console.log(parsedEvents.sort((a, b) => (a.date > b.date) ? 1: -1))
+
+            parsedEvents.sort((a, b) => {          
+                   if (a.date === b.date) {
+                      return parseInt(a.time) - parseInt(b.time);
+                   }
+                   return a.date > b.date ? 1 : -1;
+                });
 
             parsedEvents.forEach(event =>{
                 var today = new Date()
