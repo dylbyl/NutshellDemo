@@ -6,24 +6,23 @@ const tasksPageHTML = () => {
             <div id="new-task-container">
             <button id="new-task-btn">New Task</button>
             </div>
-            <div id="incomplete-task-list">
+            <div class="incomplete-task-container" id="incomplete-task-container">
+                <ul class="incomplete-task-list" id="incomplete-task-list">
+                </ul>
             </div>
     `
 }
 
-//Input a task from the tasks array in nutshell.json and places the values from the task inside of an HTML element
+//Input a task from the tasks array in nutshell.json and places the values from the task inside of HTML elements
 const formatSingleTaskHTMLElement = (task) => {
     return `
-    <div class="single-task single-task-${task.id}" id="single-task-${task.id}">
-    <h3 class="single-task-heading"><a class="task-name-link" id="task-name-link-${task.id}" href="#">
+    <li class="single-task single-task-${task.id}" id="single-task-${task.id}">
+    <h4 class="single-task-heading"><a class="task-name-link" id="task-name-link-${task.id}" href="#">
         ${task.taskName}
-    </a></h3>
-    <p class="single-task-date">
-        Date: ${task.dueDate}
-    </p>
+    </a> | Date of Completion: ${task.dueDate}</h4>
     <input type="checkbox" name="incomplete-task-checkbox" id="incomplete-task-checkbox-${task.id}">
     <label for="incomplete-task-checkbox">Task is Complete</label>
-    </div>
+    </li>
     `
 }
 
@@ -33,7 +32,7 @@ printTasksPage() {
     document.querySelector("#output-container").innerHTML = tasksPageHTML();
 
 
-    //Print tasks if the isCompleted bool is false to the incompelete tasks list
+    //Print tasks to the incompelete tasks list if the isCompleted bool is false 
     tasksAPIManager.tasksFetch(sessionStorage.getItem("userId"))
         .then((parsedTasks) =>
             parsedTasks.filter(task => task.isCompleted === false)
@@ -63,10 +62,10 @@ editTaskForm(task) {
     return `
     <div class="task-form-container" id="task-form-container">
     <form class="task-form" id="task-form">
-      <input type="text" class="task-name" id="task-name" placeholder="${task.taskName}">
+      <input type="text" class="task-name" id="task-name-${task.id}" value="${task.taskName}">
       <p>Date: ${task.dueDate}</p>
     </form>
-    <button class="task-save-btn" id="task-save-btn">Save</button>
+    <button class="task-save-btn" id="task-save-btn-${task.id}">Save</button>
   </div>
     `
 }

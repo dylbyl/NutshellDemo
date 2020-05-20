@@ -156,7 +156,7 @@
       "id": 17
     },
     {
-      "taskName": "afsafafaaf",
+      "taskName": "test patch 2",
       "dueDate": "2020-05-19",
       "isCompleted": false,
       "userId": "1",
@@ -165,14 +165,14 @@
     {
       "taskName": "safdafda",
       "dueDate": "2020-05-19",
-      "isCompleted": false,
+      "isCompleted": true,
       "userId": "1",
       "id": 19
     },
     {
       "taskName": "newest test",
       "dueDate": "2020-05-19",
-      "isCompleted": false,
+      "isCompleted": true,
       "userId": "1",
       "id": 20
     },

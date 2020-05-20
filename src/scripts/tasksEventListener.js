@@ -36,18 +36,21 @@ const tasksEvents = {
                 //Gets the id number from the end of the id and stores it in taskId
                 const taskId = event.target.id.split("-").pop()
                 //Changes the isCompleted bool to true which removes it from the incomplete task list
-                tasksAPIManager.patchTask(taskId)
+                tasksAPIManager.patchTask(taskId, { "isCompleted": true })
                     .then(tasksDOMPrinter.printTasksPage)
             } else if (event.target.id.includes("task-name-link")) {
                 const taskId = event.target.id.split("-").pop()
                 tasksAPIManager.singleTaskFetch(taskId)
                     .then(parsedFetch => parsedFetch.forEach(task =>
                         document.querySelector(`#single-task-${taskId}`).innerHTML = tasksDOMPrinter.editTaskForm(task)
-
                     ))
             } else if (event.target.id.includes("task-save-btn")) {
-                console.log("button works")
-                //TODO:  You need to refactor your patch function so you can use it to save edit
+                const taskId = event.target.id.split("-").pop()
+                const editedTaskName = document.querySelector(`#task-name-${taskId}`).value
+                const taskObjectValue = {taskName: editedTaskName}
+                tasksAPIManager.patchTask(taskId, taskObjectValue)
+                .then(tasksDOMPrinter.printTasksPage)
+                
             }
         })
     }
