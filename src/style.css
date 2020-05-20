@@ -3,6 +3,9 @@
     padding: 1em;
     width: fit-content;
 }
+.eventPage-container{
+    height: 70vh;
+}
 .event-card{
     margin: 1em;
     padding: 1em;
@@ -12,17 +15,17 @@ article:first-child{
     background-color: rgb(240, 153, 240);
     padding: 1em;
     font-weight: bolder;
-    font-size: larger;
+    font-size: large;
     border: 7px ridge grey;
 }
 #event-form{
-    border: 1em ridge rgb(0, 195, 255);
+    border: 7px ridge rgb(0, 195, 255);
     margin: 1em;
     padding: 1em;
     font-weight: bold;
 }
 #add-event-btn{
-    margin-left: 40%;
+    margin-left: 37%;
 }
 .col.event-form-column{
     margin: 3em;
@@ -32,7 +35,7 @@ article:first-child{
     margin: 1em;
     padding: 2em;
     overflow-y: scroll;
-    height: 70%;
+    height: 80%;
 }
 .col.event-container-column {
     height: 73vh;
