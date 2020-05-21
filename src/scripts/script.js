@@ -33,3 +33,15 @@ document.getElementById('output-container').onkeydown = function(e) {
 		}
 	}
 };
+import newsPrinterFunctions from "./newsPrinter.js";
+import newsListenFunctions from "./newsListeners.js"
+
+
+//If the News link in the Nav Bar is clicked, call a function to print the News section
+document.querySelector("#news-page").addEventListener("click", function() {
+    newsPrinterFunctions.printInitialPage();
+})
+
+document.querySelector("#output-container").addEventListener("click", function() {
+        newsListenFunctions.checkButton();
+    })
