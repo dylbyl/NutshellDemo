@@ -61,4 +61,6 @@ document.querySelector("#output-container").addEventListener("click", function()
 tasksEvents.tasksEventListener();
 
 tasksEvents.tasksPageEventListeners();
+
+tasksEvents.taskEditKeypressListener();
    

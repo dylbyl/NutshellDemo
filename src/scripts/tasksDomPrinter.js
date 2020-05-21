@@ -60,7 +60,7 @@ newTaskForm() {
 //Edit form that is injected into DOM when a task name is clicked
 editTaskForm(task) {
     return `
-    <div class="task-form-container" id="task-form-container">
+    <div class="edit-task-form-container" id="edit-task-form-container">
     <form class="task-form" id="task-form">
       <input type="text" class="task-name" id="task-name-${task.id}" value="${task.taskName}">
       <p>Date: ${task.dueDate}</p>

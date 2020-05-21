@@ -61,12 +61,30 @@ const tasksEvents = {
             } else if (event.target.id.includes("task-save-btn")) {
                 const taskId = event.target.id.split("-").pop()
                 const editedTaskName = document.querySelector(`#task-name-${taskId}`).value
-                const taskObjectValue = {taskName: editedTaskName}
+                const taskObjectValue = { taskName: editedTaskName }
                 tasksAPIManager.patchTask(taskId, taskObjectValue)
-                .then(tasksDOMPrinter.printTasksPage)
-                
+                    .then(tasksDOMPrinter.printTasksPage)
+
             }
         })
+    },
+
+    taskEditKeypressListener() {
+        document.getElementById('output-container').onkeydown = function (e) {
+            if (e.keyCode == 13) {
+                const taskId = event.target.id.split("-").pop()
+                if (event.target.id.includes(`task-name-${taskId}`)) {
+                    
+                    const editedTaskName = document.querySelector(`#task-name-${taskId}`).value
+                    const taskObjectValue = { taskName: editedTaskName }
+                    tasksAPIManager.patchTask(taskId, taskObjectValue)
+                        .then(tasksDOMPrinter.printTasksPage)
+
+
+                    console.log(event.target.id)
+                }
+            }
+        }
     }
 }
 

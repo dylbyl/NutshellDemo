@@ -32,8 +32,6 @@ const tasksAPIManager = {
     //Input a task and a task object value in braces in the arguments to patch the value of a specific task in the tasks array in nutshell.json
     //Example of a taskObjectValue to input in the arguments:  { "isCompleted": true }
     patchTask(taskId, taskObjectValue) {
-        console.log("taskId:", taskId)
-        console.log("taskObjectValue:", taskObjectValue)
         return fetch(`http://localhost:8088/tasks/${taskId}`, {
             method: "PATCH",
             headers: {
