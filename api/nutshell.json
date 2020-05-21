@@ -27,14 +27,6 @@
   ],
   "articles": [
     {
-<<<<<<< HEAD
-      "id": 1,
-      "title": "Coronavirus: Health workers face violent attacks in Mexico",
-      "url": "https://www.bbc.com/news/world-latin-america-52676939",
-      "synopsis": "coronavirus is bad",
-      "date": "2020/05/18",
-      "userId": 3
-=======
       "title": "Stocks mixed as Fed and Treasury chiefs testify: May 19, 2020",
       "url": "https://www.cnn.com/business/live-news/stock-market-news-051820-duplicate-2/index.html",
       "synopsis": "hiiii",
@@ -81,7 +73,6 @@
         "asdasd"
       ],
       "id": 5
->>>>>>> master
     }
   ],
   "tasks": [
@@ -108,33 +99,6 @@
       "userId": 2,
       "message": "Help! I'm trapped inside a program.",
       "time": "2020/05/18"
-<<<<<<< HEAD
-    },
-    {
-      "userId": 1,
-      "message": "(edited on 20/4/2020 at 14:35:12)  Testing again",
-      "time": "20/4/2020 at 14:34:11",
-      "id": 14
-    },
-    {
-      "userId": 1,
-      "message": "Test",
-      "time": "20/4/2020 at 14:35:39",
-      "id": 15
-    },
-    {
-      "userId": 1,
-      "message": "(edited on 20/4/2020 at 15:00:45)   Testing time",
-      "time": "20/4/2020 at 14:35:43",
-      "id": 16
-    },
-    {
-      "userId": 1,
-      "message": "Test",
-      "time": "20/4/2020 at 15:00:48",
-      "id": 17
-=======
->>>>>>> master
     }
   ]
 }
