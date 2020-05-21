@@ -1,6 +1,20 @@
 import tasksDOMPrinter from './tasksDOMPrinter.js'
 import tasksAPIManager from './tasksAPIManager.js'
 
+
+//Script.js
+// import tasksEvents from './tasksEventListener.js'
+
+
+
+// sessionStorage.setItem("userId", 1)
+
+// tasksEvents.tasksEventListener();
+
+// tasksEvents.tasksPageEventListeners();
+
+// tasksPageEventListeners()
+
 /*TODO:
 -Make sure you are posting and fetching for a single user.
 -Make sure you move everything out of script.js and into your module JS files before you submit a merge request.

@@ -1,0 +1,22 @@
+.incomplete-task-container {
+    border: 1px solid black;
+    width: 40vw;
+    margin: 5vw;
+}
+
+.incomplete-task-list>h3{
+    text-align: center;
+}
+
+.new-task-container {
+    /* border: 1px solid black; */
+    width: 30vw;
+    text-align: center;
+    position: relative;
+    left: 35vw;
+}
+
+.new-task-btn {
+    width: 10vw;
+    height: 5vh;
+}

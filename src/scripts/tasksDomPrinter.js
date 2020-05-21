@@ -3,11 +3,11 @@ import tasksAPIManager from './TasksAPIManager.js'
 //The HTML for the Tasks page
 const tasksPageHTML = () => {
     return `
-            <div id="new-task-container">
-            <button id="new-task-btn">New Task</button>
+            <div class="new-task-container" id="new-task-container">
+            <button class="new-task-btn" id="new-task-btn">New Task</button>
             </div>
             <div class="incomplete-task-container" id="incomplete-task-container">
-                <ul class="incomplete-task-list" id="incomplete-task-list">
+                <ul class="incomplete-task-list" id="incomplete-task-list"><h3>Incomplete Tasks</h3>
                 </ul>
             </div>
     `
@@ -17,11 +17,11 @@ const tasksPageHTML = () => {
 const formatSingleTaskHTMLElement = (task) => {
     return `
     <li class="single-task single-task-${task.id}" id="single-task-${task.id}">
-    <h4 class="single-task-heading"><a class="task-name-link" id="task-name-link-${task.id}" href="#">
+    <h5 class="single-task-heading"><a class="task-name-link" id="task-name-link-${task.id}" href="#">
         ${task.taskName}
-    </a> | Date of Completion: ${task.dueDate}</h4>
-    <input type="checkbox" name="incomplete-task-checkbox" id="incomplete-task-checkbox-${task.id}">
-    <label for="incomplete-task-checkbox">Task is Complete</label>
+    </a> | Date of Completion: ${task.dueDate} |  <input type="checkbox" name="incomplete-task-checkbox" id="incomplete-task-checkbox-${task.id}">
+    <label for="incomplete-task-checkbox">Task is Complete</label></h5>
+   
     </li>
     `
 }
