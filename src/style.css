@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .incomplete-task-container {
     border: 1px solid black;
     width: 40vw;
@@ -22,7 +21,6 @@
     height: 5vh;
 }
 
-=======
 #chat-container{
     height: 25vh;
     overflow:auto; 
@@ -51,7 +49,6 @@
     width: 97vw;
     margin-bottom: 1em;
 }
->>>>>>> master
 .news-input-bar{
     margin: 1em;
     width: 50%;
