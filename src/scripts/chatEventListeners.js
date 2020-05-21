@@ -24,7 +24,7 @@ const chatEventListeners = {
 		let time =
 			today.getDate() +
 			'/' +
-			today.getMonth() +
+			(today.getMonth()+1) +
 			'/' +
 			today.getFullYear() +
 			' at ' +
