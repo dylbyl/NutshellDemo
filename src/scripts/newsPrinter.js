@@ -101,7 +101,7 @@ const newsPrinterFunctions = {
               });
 
               //Adds the buttons to the DOM, using tagSelectHTML to set the correct buttons as selected
-              tagButtons += `<button class="btn ${tagSelectHTML} edit-tag-btn news-btn" id="tag-btn-${tagObject.id}-${article.id}">${tagObject.name}</button>`;
+              tagButtons += `<button class="btn ${tagSelectHTML} tag-btn news-btn" id="tag-btn-${tagObject.id}-${article.id}">${tagObject.name}</button>`;
             });
 
             //Prints the above buttons, as well as the article's values from the API, to the DOM
