@@ -1,3 +1,73 @@
+#output-container{
+    margin: 1em;
+    padding: 1em;
+    width: fit-content;
+}
+.eventPage-container{
+    height: 70vh;
+}
+.event-card{
+    margin: 1em;
+    padding: 1em;
+    height: fit-content;
+}
+article:first-child{
+    background-color: rgb(240, 153, 240);
+    padding: 1em;
+    font-weight: bolder;
+    font-size: large;
+    border: 7px ridge grey;
+}
+#event-form{
+    border: 7px ridge rgb(0, 195, 255);
+    margin: 1em;
+    padding: 1em;
+    font-weight: bold;
+}
+#add-event-btn{
+    margin-left: 37%;
+}
+.col.event-form-column{
+    margin: 3em;
+    padding: 1em;   
+}
+#events-container{
+    margin: 1em;
+    padding: 2em;
+    overflow-y: scroll;
+    height: 80%;
+}
+.col.event-container-column {
+    height: 73vh;
+}
+#chat-container{
+    height: 25vh;
+    overflow:auto; 
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border: 1px solid black;
+    width: 97vw;
+    justify-content: center;
+    align-items: center;
+}
+#chat-output{
+    margin-bottom: 2em;
+    margin-top: 2em;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1em;
+}
+.edit-chat-message{
+    margin-left: 2em;
+    font-size: 15px;
+}
+.delete-chat-message{
+    font-size: 15px;
+}
+#new-chat-message{
+    width: 97vw;
+    margin-bottom: 1em;
+}
 .news-input-bar{
     margin: 1em;
     width: 50%;

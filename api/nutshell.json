@@ -27,12 +27,22 @@
   ],
   "articles": [
     {
+      "id": 2,
       "title": "Stocks mixed as Fed and Treasury chiefs testify: May 19, 2020",
       "url": "https://www.cnn.com/business/live-news/stock-market-news-051820-duplicate-2/index.html",
       "synopsis": "hiiii",
+<<<<<<< HEAD
       "date": "2020/5/21",
       "userId": 1,
       "id": 2
+=======
+      "date": "2020/5/19",
+      "userId": 3,
+      "tags": [
+        "Stocks",
+        "asd"
+      ]
+>>>>>>> master
     },
     {
       "title": "Coronavirus: Health workers face violent attacks in Mexico",
@@ -124,11 +134,84 @@
   ],
   "events": [
     {
-      "id": 1,
-      "name": "Ball",
-      "date": "2020/05/21",
-      "location": "Washington D.C.",
+      "id": 4,
+      "name": "Relay for Life",
+      "date": "2020-05-31",
+      "time": "20:00",
+      "location": "Springfield, Illinois",
+      "description": "Charity Event- Gala"
+    },
+    {
+      "id": 9,
+      "name": "American Red Cross",
+      "date": "2020-05-30",
+      "time": "12:00",
+      "location": "Community Center",
+      "description": "Local High School holding a blood drive"
+    },
+    {
+      "id": 10,
+      "name": "Capstone Presentation",
+      "date": "2020-06-29",
+      "time": "08:00",
+      "location": "Virtual-Remote",
+      "description": "Virtual Capstone presentation through Zoom"
+    },
+    {
+      "name": "Masquerade",
+      "date": "2020-04-25",
+      "location": "City Hall",
+      "description": "Formal event to raise money for the city",
+      "id": 11,
       "userId": 4
+    },
+    {
+      "id": 12,
+      "name": "Hike",
+      "date": "2020-07-31",
+      "time": "09:00",
+      "location": "Fayetteville, WV",
+      "description": "Nature hike through paved trails"
+    },
+    {
+      "name": "Quiz",
+      "date": "2020-01-26",
+      "location": "Classroom A",
+      "description": "Quiz on whether code works as anticipated",
+      "id": 13,
+      "userId": 4
+    },
+    {
+      "id": 14,
+      "name": "Trail Run",
+      "date": "2020-05-31",
+      "time": "14:00",
+      "location": "State Park",
+      "description": "5K afternoon trail run "
+    },
+    {
+      "id": 15,
+      "name": "Homecoming",
+      "date": "2020-07-31",
+      "time": "18:01",
+      "location": "City Park",
+      "description": "5K/Half Marathon race, food cart festival, fireworks, boat race"
+    },
+    {
+      "id": 17,
+      "name": "Milkshake Bonanza",
+      "date": "2020-05-22",
+      "time": "17:00",
+      "location": "Huntington, WV",
+      "description": "A grand adventure around the land of Huntington, WV to see where we can find the best milkshake (and also just enjoy milkshakes because TGIF)"
+    },
+    {
+      "name": "Birthday Party",
+      "date": "2020-06-29",
+      "time": "17:00",
+      "location": "Mary's apartment",
+      "description": "Surprise birthday party for a friend",
+      "id": 18
     }
   ],
   "messages": [
@@ -137,6 +220,12 @@
       "userId": 2,
       "message": "Help! I'm trapped inside a program.",
       "time": "2020/05/18"
+    },
+    {
+      "userId": 1,
+      "message": "(edited on 21/5/2020 at 10:40:9)  test",
+      "time": "21/5/2020 at 10:39:5",
+      "id": 2
     }
   ]
 }
