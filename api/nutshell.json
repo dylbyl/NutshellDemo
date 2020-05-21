@@ -27,12 +27,52 @@
   ],
   "articles": [
     {
-      "id": 1,
+      "title": "Stocks mixed as Fed and Treasury chiefs testify: May 19, 2020",
+      "url": "https://www.cnn.com/business/live-news/stock-market-news-051820-duplicate-2/index.html",
+      "synopsis": "hiiii",
+      "date": "2020/5/19",
+      "tags": [
+        "Stocks",
+        "asd"
+      ],
+      "userId": 3,
+      "id": 2
+    },
+    {
       "title": "Coronavirus: Health workers face violent attacks in Mexico",
       "url": "https://www.bbc.com/news/world-latin-america-52676939",
       "synopsis": "coronavirus is bad",
-      "date": "2020/05/18",
-      "userId": 3
+      "date": "2020/5/19",
+      "tags": [
+        "COVID-19",
+        "Mexico"
+      ],
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "title": "asd",
+      "url": "asd",
+      "synopsis": "asd",
+      "date": "2020/5/19",
+      "tags": [
+        "asd",
+        "asd"
+      ],
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "title": "asd",
+      "url": "asd",
+      "synopsis": "asd",
+      "date": "2020/5/19",
+      "userId": "1",
+      "tags": [
+        "asdasd",
+        "asdasd"
+      ],
+      "id": 5
     }
   ],
   "tasks": [
@@ -42,146 +82,6 @@
       "dueDate": "2020/05/21",
       "isCompleted": false,
       "userId": 1
-    },
-    {
-      "taskName": "testing tasks again",
-      "dueDate": "2020-05-19",
-      "isCompleted": false,
-      "userId": 2,
-      "id": 2
-    },
-    {
-      "taskName": "Nutshell Project",
-      "dueDate": "2020-05-22",
-      "isCompleted": false,
-      "userId": "1",
-      "id": 3
-    },
-    {
-      "taskName": "Take dog hiking",
-      "dueDate": "2020-05-23",
-      "isCompleted": false,
-      "userId": "1",
-      "id": 4
-    },
-    {
-      "taskName": "Take breaks",
-      "dueDate": "2020-05-19",
-      "isCompleted": true,
-      "userId": "1",
-      "id": 5
-    },
-    {
-      "taskName": "Laundry",
-      "dueDate": "2020-05-20",
-      "isCompleted": false,
-      "userId": "2",
-      "id": 6
-    },
-    {
-      "taskName": "Study",
-      "dueDate": "2020-05-22",
-      "isCompleted": false,
-      "userId": "2",
-      "id": 7
-    },
-    {
-      "taskName": "sleep",
-      "dueDate": "2020-05-19",
-      "isCompleted": true,
-      "userId": "2",
-      "id": 8
-    },
-    {
-      "taskName": "test",
-      "dueDate": "2020-05-19",
-      "isCompleted": true,
-      "userId": "2",
-      "id": 9
-    },
-    {
-      "taskName": "test agdagdagda",
-      "dueDate": "2020-05-19",
-      "isCompleted": false,
-      "userId": "2",
-      "id": 10
-    },
-    {
-      "taskName": "dagadgdag",
-      "dueDate": "2020-05-19",
-      "isCompleted": true,
-      "userId": "1",
-      "id": 11
-    },
-    {
-      "taskName": "shjfhshfshfshfs",
-      "dueDate": "2020-05-19",
-      "isCompleted": false,
-      "userId": "1",
-      "id": 12
-    },
-    {
-      "taskName": "aaeeee",
-      "dueDate": "2020-05-19",
-      "isCompleted": false,
-      "userId": "1",
-      "id": 13
-    },
-    {
-      "taskName": "aaeeee",
-      "dueDate": "2020-05-19",
-      "isCompleted": false,
-      "userId": "1",
-      "id": 14
-    },
-    {
-      "taskName": "fffff",
-      "dueDate": "2020-05-19",
-      "isCompleted": false,
-      "userId": "1",
-      "id": 15
-    },
-    {
-      "taskName": "tatadat",
-      "dueDate": "2020-05-19",
-      "isCompleted": false,
-      "userId": "1",
-      "id": 16
-    },
-    {
-      "taskName": "gsgsgsgeerer",
-      "dueDate": "2020-05-19",
-      "isCompleted": false,
-      "userId": "1",
-      "id": 17
-    },
-    {
-      "taskName": "test patch 2",
-      "dueDate": "2020-05-19",
-      "isCompleted": false,
-      "userId": "1",
-      "id": 18
-    },
-    {
-      "taskName": "safdafda",
-      "dueDate": "2020-05-19",
-      "isCompleted": true,
-      "userId": "1",
-      "id": 19
-    },
-    {
-      "taskName": "newest test",
-      "dueDate": "2020-05-19",
-      "isCompleted": true,
-      "userId": "1",
-      "id": 20
-    },
-    {
-      "taskName": "one test",
-      "dueDate": "2020-05-19",
-      "isCompleted": true,
-      "userId": "1",
-      "id": 21
     }
   ],
   "events": [
