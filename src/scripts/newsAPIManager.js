@@ -3,15 +3,20 @@ import newsPrinterFunctions from "./newsPrinter.js";
 const newsAPIFunctions = {
   //Fetches all saved news articles from the API
   fetchAllArticlesFromAPI: () => {
-    return fetch("http://localhost:8088/articles").then((r) => r.json());
+    return fetch(
+      "http://localhost:8088/articles?_expand=user&_embed=article-tags"
+    ).then((r) => r.json());
   },
   //Fetches a single news article from the API, using an ID
   fetchSingleArticleFromAPI: (id) => {
     return fetch(`http://localhost:8088/articles/${id}`).then((r) => r.json());
   },
+  fetchAllTagsFromAPI: () => {
+    return fetch(`http://localhost:8088/tags/`).then((r) => r.json());
+  },
   //Saves a news article to the API
   addArticleToAPI: () => {
-      //Creates a string of today's date to keep track of when articles were saved
+    //Creates a string of today's date to keep track of when articles were saved
     var today = new Date();
     var dateToday =
       today.getFullYear() +
@@ -20,19 +25,11 @@ const newsAPIFunctions = {
       "/" +
       today.getDate();
 
-      //pulls user input for the article title, synopsis, url, and tags
+    //pulls user input for the article title, synopsis, url, and tags
     const titleInput = document.querySelector("#title-input").value;
     const synopsisInput = document.querySelector("#synopsis-input").value;
     const urlInput = document.querySelector("#url-input").value;
     //splits the tag input around commas
-    let tagInput = document.querySelector("#tag-input").value.split(",");
-
-    for (let i = 0; i < tagInput.length; i++) {
-        //Removes the space at the beginning of a tag (usually a space placed after a comma)
-      if (tagInput[i][0] === " ") {
-        tagInput[i] = tagInput[i].slice(1);
-      }
-    }
 
     //Creates a new object using all of the above data
     const articleToAdd = {
@@ -40,8 +37,7 @@ const newsAPIFunctions = {
       url: urlInput,
       synopsis: synopsisInput,
       date: dateToday,
-      userId: sessionStorage.getItem("userId"),
-      tags: tagInput,
+      userId: parseInt(sessionStorage.getItem("userId")),
     };
     //Makes a POST call to save the above object in the API
     fetch(`http://localhost:8088/articles`, {
@@ -52,12 +48,28 @@ const newsAPIFunctions = {
       },
       body: JSON.stringify(articleToAdd),
     }).then(() => {
-      newsPrinterFunctions.printInitialPage();
+      let tagButtons = document.querySelectorAll(".tag-btn");
+      let articleTagId = "";
+
+      //fetches the new Id of the article we just added, so that we can setup tags in a join-table
+      fetch(`http://localhost:8088/articles`)
+        .then((r) => r.json())
+        .then((articles) => {
+          articles.forEach((article) => {
+            if (article.name === articleToAdd.name) {
+              articleTagId = article.id;
+            }
+          });
+
+          //Calls the function to print tag buttons, sending it the articleId we just grabbed. This saves us a few fetch calls later, trust me
+          newsPrinterFunctions.printAddTag(articleTagId);
+        });
     });
   },
+
   //A function for editing an existing article in the API
   editArticleInAPI: (idToEdit) => {
-      //Creates a date string, pulls user input, and creates a tag array. see addArticleToAPI for more exposition
+    //Creates a date string, pulls user input, and creates a tag array. see addArticleToAPI for more exposition
     var today = new Date();
     var dateToday =
       today.getFullYear() +
@@ -69,13 +81,6 @@ const newsAPIFunctions = {
     const titleInput = document.querySelector("#edit-title-input").value;
     const synopsisInput = document.querySelector("#edit-synopsis-input").value;
     const urlInput = document.querySelector("#edit-url-input").value;
-    let tagInput = document.querySelector("#edit-tag-input").value.split(",");
-
-    for (let i = 0; i < tagInput.length; i++) {
-      if (tagInput[i][0] === " ") {
-        tagInput[i] = tagInput[i].slice(1);
-      }
-    }
 
     //Creates an article object based on the above info
     const articleToAdd = {
@@ -83,8 +88,7 @@ const newsAPIFunctions = {
       url: urlInput,
       synopsis: synopsisInput,
       date: dateToday,
-      userId: sessionStorage.getItem("userID"),
-      tags: tagInput,
+      userId: parseInt(sessionStorage.getItem("userId")),
     };
 
     //Makes a PUT call to update the API object with this new object
@@ -105,11 +109,55 @@ const newsAPIFunctions = {
     }).then(() => {
       newsPrinterFunctions.printInitialPage();
     });
+    fetch(`http://localhost:8088/article-tags/`)
+      .then((r) => r.json())
+      .then((tagRelations) => {
+        tagRelations.forEach((tagRelation) => {
+          if (tagRelation.articleId === idToDelete) {
+            fetch(`http://localhost:8088/article-tags/${tagRelation.id}`, {
+              method: "DELETE",
+            });
+          }
+        });
+      });
   },
-  //Fetches a single user from the API, used to grab usernames attached to saved articles
-  fetchUserFromAPI: (userId) => {
-    return fetch(`http://localhost:8088/users/${userId}`).then((r) => r.json());
+  //Deletes a single article-tag relation from the API, using ids contained in the event target button
+  deleteTagFromArticle : () => {
+    const tagToRemove = parseInt(event.target.id.split("-")[2])
+    const articleToRemove = parseInt(event.target.id.split("-")[3])
+
+    fetch(`http://localhost:8088/article-tags`)
+    .then(r => r.json())
+    .then(tagRelationArray =>{
+      tagRelationArray.forEach(tagRelation => {
+        if((tagRelation.articleId === articleToRemove) && (tagRelation.tagId === tagToRemove)){
+          
+          fetch(`http://localhost:8088/article-tags/${tagRelation.id}`, {
+              method: "DELETE",
+            });
+        }
+      })
+    })
   },
+  //Adds a single tag to the API, using ids from the clicked button
+  addTagToArticle : () => {
+      const tagToAdd = parseInt(event.target.id.split("-")[2])
+      const articleToAdd = parseInt(event.target.id.split("-")[3])
+      
+      const tagRelationToAdd = {
+        "articleId" : articleToAdd,
+        "tagId" : tagToAdd
+      }
+
+      fetch(`http://localhost:8088/article-tags`, {
+                  // Replace "url" with your json-server API's URL
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(tagRelationToAdd),
+                })
+  }
 };
 
 export default newsAPIFunctions;

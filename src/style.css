@@ -102,6 +102,11 @@ article:first-child{
 
 .news-btn{
     margin: 1em;
+    color: white;
+}
+
+a{
+    color: white;
 }
 
 .news-card{
@@ -111,4 +116,9 @@ article:first-child{
 #news-results-container{
     display: flex;
     flex-wrap: wrap;
+}
+
+.tag-select{
+    font-weight: bold;
+    margin: 1em;
 }

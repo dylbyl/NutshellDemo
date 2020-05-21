@@ -31,48 +31,99 @@
       "title": "Stocks mixed as Fed and Treasury chiefs testify: May 19, 2020",
       "url": "https://www.cnn.com/business/live-news/stock-market-news-051820-duplicate-2/index.html",
       "synopsis": "hiiii",
-      "date": "2020/5/19",
-      "userId": 3,
-      "tags": [
-        "Stocks",
-        "asd"
-      ]
+      "date": "2020/5/21",
+      "userId": 3
     },
     {
       "title": "Coronavirus: Health workers face violent attacks in Mexico",
       "url": "https://www.bbc.com/news/world-latin-america-52676939",
       "synopsis": "coronavirus is bad",
-      "date": "2020/5/19",
-      "tags": [
-        "COVID-19",
-        "Mexico"
-      ],
-      "userId": 3,
+      "date": "2020/5/21",
+      "userId": 1,
       "id": 3
     },
     {
-      "title": "asd",
-      "url": "asd",
-      "synopsis": "asd",
-      "date": "2020/5/19",
-      "tags": [
-        "asd",
-        "asd"
-      ],
-      "userId": 3,
-      "id": 4
+      "title": "Structure fire shuts down part of road",
+      "url": "https://www.wsaz.com/content/news/Structure-fire-shuts-down-part-of-road-570627631.html",
+      "synopsis": "Crazy stuff",
+      "date": "2020/5/21",
+      "userId": 1,
+      "id": 5
     },
     {
       "title": "asd",
       "url": "asd",
       "synopsis": "asd",
-      "date": "2020/5/19",
-      "userId": "1",
-      "tags": [
-        "asdasd",
-        "asdasd"
-      ],
-      "id": 5
+      "date": "2020/5/21",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "title": "I-64 Lanes shut down after two crashes",
+      "url": "https://www.wsaz.com/content/news/I-64-Lanes-shut-down-after-two-crashes-570659451.html",
+      "synopsis": "Avoid I-64 for the day!",
+      "date": "2020/5/21",
+      "userId": 1,
+      "id": 7
+    }
+  ],
+  "article-tags": [
+    {
+      "articleId": 5,
+      "tagId": 1,
+      "id": 32
+    },
+    {
+      "articleId": 2,
+      "tagId": 1,
+      "id": 33
+    },
+    {
+      "articleId": 3,
+      "tagId": 1,
+      "id": 36
+    },
+    {
+      "articleId": 3,
+      "tagId": 2,
+      "id": 37
+    },
+    {
+      "articleId": 6,
+      "tagId": 4,
+      "id": 42
+    },
+    {
+      "articleId": 2,
+      "tagId": 3,
+      "id": 43
+    },
+    {
+      "articleId": 7,
+      "tagId": 1,
+      "id": 44
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "Current Events"
+    },
+    {
+      "id": 2,
+      "name": "Health"
+    },
+    {
+      "id": 3,
+      "name": "Politics"
+    },
+    {
+      "id": 4,
+      "name": "Art"
+    },
+    {
+      "id": 5,
+      "name": "Science"
     }
   ],
   "tasks": [
@@ -178,6 +229,13 @@
       "location": "Mary's apartment",
       "description": "Surprise birthday party for a friend",
       "id": 18
+    },
+    {
+      "name": "sdfsdf",
+      "date": "",
+      "location": "sdfsdf",
+      "description": "sdfsdf",
+      "id": 19
     }
   ],
   "messages": [
@@ -186,6 +244,12 @@
       "userId": 2,
       "message": "Help! I'm trapped inside a program.",
       "time": "2020/05/18"
+    },
+    {
+      "userId": 1,
+      "message": "(edited on 21/5/2020 at 11:35:14)   test~",
+      "time": "21/5/2020 at 10:39:5",
+      "id": 2
     }
   ]
 }

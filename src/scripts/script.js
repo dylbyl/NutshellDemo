@@ -1,6 +1,7 @@
 import event_eventListener from "./event-eventListeners.js"
 
 sessionStorage.setItem("userId", 1)
+sessionStorage.setItem("username", "user1")
 
 //Calling all event listeners for 'Events'
 event_eventListener.eventsPageListener()
@@ -44,16 +45,19 @@ document.getElementById('output-container').onkeydown = function(e) {
 		}
 	}
 };
+
+
+//Imports functions for DOM printing and EventListeners
 import newsPrinterFunctions from "./newsPrinter.js";
 import newsListenFunctions from "./newsListeners.js";
 import tasksEvents from "./tasksEventListener.js";
-
 
 //If the News link in the Nav Bar is clicked, call a function to print the News section
 document.querySelector("#news-page").addEventListener("click", function() {
     newsPrinterFunctions.printInitialPage();
 })
 
+//Checks which buttons are being clicked in the News section
 document.querySelector("#output-container").addEventListener("click", function() {
         newsListenFunctions.checkButton();
     })
