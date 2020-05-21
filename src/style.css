@@ -40,6 +40,34 @@ article:first-child{
 .col.event-container-column {
     height: 73vh;
 }
+#chat-container{
+    height: 25vh;
+    overflow:auto; 
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border: 1px solid black;
+    width: 97vw;
+    justify-content: center;
+    align-items: center;
+}
+#chat-output{
+    margin-bottom: 2em;
+    margin-top: 2em;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1em;
+}
+.edit-chat-message{
+    margin-left: 2em;
+    font-size: 15px;
+}
+.delete-chat-message{
+    font-size: 15px;
+}
+#new-chat-message{
+    width: 97vw;
+    margin-bottom: 1em;
+}
 .news-input-bar{
     margin: 1em;
     width: 50%;
