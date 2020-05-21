@@ -1,0 +1,21 @@
+.news-input-bar{
+    margin: 1em;
+    width: 50%;
+}
+
+.news-card-input {
+    width: 90%;
+}
+
+.news-btn{
+    margin: 1em;
+}
+
+.news-card{
+    margin: 1em;
+}
+
+#news-results-container{
+    display: flex;
+    flex-wrap: wrap;
+}
