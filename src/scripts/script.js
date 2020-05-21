@@ -1,3 +1,14 @@
+import event_eventListener from "./event-eventListeners.js"
+
+sessionStorage.setItem("userId", 1)
+
+//Calling all event listeners for 'Events'
+event_eventListener.eventsPageListener()
+event_eventListener.addNewEventListener()
+event_eventListener.deleteEventListener()
+event_eventListener.editEventListener()
+event_eventListener.saveEventListener()
+
 // Importing the chat event listener functions
 import chatEventListeners from './chatEventListeners.js';
 // Importing the chat api functions
