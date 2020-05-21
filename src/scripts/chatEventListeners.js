@@ -5,30 +5,57 @@ const chatEventListeners = {
 	// Creating a function to load the chat page
 	loadChatPage: () => {
 		document.querySelector(`#output-container`).innerHTML = `
-        <h3>Chat</h3>
+		<div id="chat-output">
+        <h3 id="chat-heading">Chat</h3>
         <div id="chat-container"></div>
         <div id="chat-buttons"></div>
         <div id="new-chat-msg-form">
-        <h4>Submit New Message</h4>
         <input type="text"id="new-chat-message">
         <button id="submit-chat-msg">Send</button>        
-        <div>
+		</div>
+		</div>
         `;
 	},
+	// Creating submit chat message event listener function
 	submitNewChatMessage: () => {
 		const chatMessage = document.querySelector(`#new-chat-message`).value;
+		// Setting date/time for time stamp
 		let today = new Date();
-		let time = today.getHours() + `:` + today.getMinutes() + `:` + today.getSeconds();
+		let time =
+			today.getDate() +
+			'/' +
+			today.getMonth() +
+			'/' +
+			today.getFullYear() +
+			' at ' +
+			today.getHours() +
+			`:` +
+			('0' + today.getMinutes()).slice(-2) +
+			`:` +
+			today.getSeconds();
 		const messageToSend = {
 			userId: 1,
 			message: chatMessage,
 			time: time
 		};
-		console.log(messageToSend);
+		// Calling postNewMessage to send the api calls to post the message
 		chatAPI.postNewMessage(messageToSend);
+	},
+	// Creating a delete message listener function
+	deleteChatMessageListener: () => {
+		const messageID = event.target.id.split('-')[2];
+		chatAPI.deleteChatMessage(messageID);
+	},
+	// Creating a edit chat message listener for when the user clicks edit
+	editChatMessageListener: () => {
+		const messageID = event.target.id.split(`-`)[2];
+		chatAPI.getSingleChatMessage(messageID);
+	},
+	// Creating a save message listener for when the user clicks save
+	saveChatMsgEditListener: () => {
+		const messageID = event.target.id.split(`-`)[2];
+		chatAPI.submitChatMessageEdit(messageID);
 	}
 };
-
+// Exporting the event listener functions
 export default chatEventListeners;
-
-// Make a function for checking logged in users ID versus posts and if id matches then have edit/delete buttons next to the message

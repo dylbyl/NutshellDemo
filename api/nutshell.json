@@ -62,33 +62,27 @@
     },
     {
       "userId": 1,
+      "message": "(edited on 20/4/2020 at 14:35:12)  Testing again",
+      "time": "20/4/2020 at 14:34:11",
+      "id": 14
+    },
+    {
+      "userId": 1,
       "message": "Test",
-      "time": "time",
-      "id": 2
+      "time": "20/4/2020 at 14:35:39",
+      "id": 15
     },
     {
       "userId": 1,
-      "message": "Time testing",
-      "time": 1589909207309,
-      "id": 3
+      "message": "(edited on 20/4/2020 at 15:00:45)   Testing time",
+      "time": "20/4/2020 at 14:35:43",
+      "id": 16
     },
     {
       "userId": 1,
-      "message": "Testing time",
-      "time": "2020-5-19",
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "message": "Testing a better stamp",
-      "time": "13:32:25",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "message": "Testing again",
-      "time": "15:22:53",
-      "id": 6
+      "message": "Test",
+      "time": "20/4/2020 at 15:00:48",
+      "id": 17
     }
   ]
 }
