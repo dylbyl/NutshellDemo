@@ -30,49 +30,87 @@
       "title": "Stocks mixed as Fed and Treasury chiefs testify: May 19, 2020",
       "url": "https://www.cnn.com/business/live-news/stock-market-news-051820-duplicate-2/index.html",
       "synopsis": "hiiii",
-      "date": "2020/5/19",
-      "tags": [
-        "Stocks",
-        "asd"
-      ],
-      "userId": 3,
+      "date": "2020/5/21",
+      "userId": 1,
       "id": 2
     },
     {
       "title": "Coronavirus: Health workers face violent attacks in Mexico",
       "url": "https://www.bbc.com/news/world-latin-america-52676939",
       "synopsis": "coronavirus is bad",
-      "date": "2020/5/19",
-      "tags": [
-        "COVID-19",
-        "Mexico"
-      ],
-      "userId": 3,
+      "date": "2020/5/21",
+      "userId": 1,
       "id": 3
     },
     {
-      "title": "asd",
-      "url": "asd",
-      "synopsis": "asd",
-      "date": "2020/5/19",
-      "tags": [
-        "asd",
-        "asd"
-      ],
-      "userId": 3,
-      "id": 4
+      "title": "Structure fire shuts down part of road",
+      "url": "https://www.wsaz.com/content/news/Structure-fire-shuts-down-part-of-road-570627631.html",
+      "synopsis": "Crazy stuff",
+      "date": "2020/5/21",
+      "userId": 1,
+      "id": 5
     },
     {
       "title": "asd",
       "url": "asd",
       "synopsis": "asd",
-      "date": "2020/5/19",
-      "userId": "1",
-      "tags": [
-        "asdasd",
-        "asdasd"
-      ],
-      "id": 5
+      "date": "2020/5/21",
+      "userId": 1,
+      "id": 6
+    }
+  ],
+  "article-tags": [
+    {
+      "articleId": 5,
+      "tagId": 1,
+      "id": 32
+    },
+    {
+      "articleId": 2,
+      "tagId": 1,
+      "id": 33
+    },
+    {
+      "articleId": 3,
+      "tagId": 1,
+      "id": 36
+    },
+    {
+      "articleId": 3,
+      "tagId": 2,
+      "id": 37
+    },
+    {
+      "articleId": 6,
+      "tagId": 4,
+      "id": 42
+    },
+    {
+      "articleId": 2,
+      "tagId": 3,
+      "id": 43
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "Current Events"
+    },
+    {
+      "id": 2,
+      "name": "Health"
+    },
+    {
+      "id": 3,
+      "name": "Politics"
+    },
+    {
+      "id": 4,
+      "name": "Art"
+    },
+    {
+      "id": 5,
+      "name": "Science"
     }
   ],
   "tasks": [

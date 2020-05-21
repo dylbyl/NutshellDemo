@@ -10,7 +10,7 @@ const newsListenFunctions = {
         }
         //Runs when the user clicks an edit button
         else if (event.target.id.includes("edit-news")){
-            newsPrinterFunctions.printInitialPage();
+            // newsPrinterFunctions.printInitialPage();
             newsPrinterFunctions.printEditForm();
         }
         //Runs when the user clicks a delete button
@@ -30,9 +30,22 @@ const newsListenFunctions = {
             newsPrinterFunctions.printInitialPage();
         }
         //Runs when the user clicks on a tag for a news story
-        else if (event.target.id.includes("news-tag")){
+        else if (event.target.id.includes("tag-link")){
             newsPrinterFunctions.printTaggedArticles();
         }
+        else if(event.target.classList.contains("tag-btn")){
+            event.target.classList.toggle("btn-primary")
+        }
+        else if(event.target.classList.contains("edit-tag-btn")){
+            if(event.target.classList.contains("btn-primary")){
+                event.target.classList.remove("btn-primary")
+                newsAPIFunctions.deleteTagFromArticle();
+            }else{
+                event.target.classList.add("btn-primary")
+                newsAPIFunctions.addTagToArticle();
+            }
+        }
+        
     }
 }
 
