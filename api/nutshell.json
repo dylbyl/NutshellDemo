@@ -31,18 +31,8 @@
       "title": "Stocks mixed as Fed and Treasury chiefs testify: May 19, 2020",
       "url": "https://www.cnn.com/business/live-news/stock-market-news-051820-duplicate-2/index.html",
       "synopsis": "hiiii",
-<<<<<<< HEAD
       "date": "2020/5/21",
-      "userId": 1,
-      "id": 2
-=======
-      "date": "2020/5/19",
-      "userId": 3,
-      "tags": [
-        "Stocks",
-        "asd"
-      ]
->>>>>>> master
+      "userId": 3
     },
     {
       "title": "Coronavirus: Health workers face violent attacks in Mexico",
@@ -67,6 +57,14 @@
       "date": "2020/5/21",
       "userId": 1,
       "id": 6
+    },
+    {
+      "title": "I-64 Lanes shut down after two crashes",
+      "url": "https://www.wsaz.com/content/news/I-64-Lanes-shut-down-after-two-crashes-570659451.html",
+      "synopsis": "Avoid I-64 for the day!",
+      "date": "2020/5/21",
+      "userId": 1,
+      "id": 7
     }
   ],
   "article-tags": [
@@ -99,6 +97,11 @@
       "articleId": 2,
       "tagId": 3,
       "id": 43
+    },
+    {
+      "articleId": 7,
+      "tagId": 1,
+      "id": 44
     }
   ],
   "tags": [
@@ -212,6 +215,13 @@
       "location": "Mary's apartment",
       "description": "Surprise birthday party for a friend",
       "id": 18
+    },
+    {
+      "name": "sdfsdf",
+      "date": "",
+      "location": "sdfsdf",
+      "description": "sdfsdf",
+      "id": 19
     }
   ],
   "messages": [
@@ -223,7 +233,7 @@
     },
     {
       "userId": 1,
-      "message": "(edited on 21/5/2020 at 10:40:9)  test",
+      "message": "(edited on 21/5/2020 at 11:35:14)   test~",
       "time": "21/5/2020 at 10:39:5",
       "id": 2
     }

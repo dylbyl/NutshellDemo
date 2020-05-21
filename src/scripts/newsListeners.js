@@ -33,10 +33,8 @@ const newsListenFunctions = {
         else if (event.target.id.includes("tag-link")){
             newsPrinterFunctions.printTaggedArticles();
         }
+        //When tag buttons are clicked while editing an article, changes a CSS class and deletes/adds the tag to the article
         else if(event.target.classList.contains("tag-btn")){
-            event.target.classList.toggle("btn-primary")
-        }
-        else if(event.target.classList.contains("edit-tag-btn")){
             if(event.target.classList.contains("btn-primary")){
                 event.target.classList.remove("btn-primary")
                 newsAPIFunctions.deleteTagFromArticle();

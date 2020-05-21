@@ -51,6 +51,7 @@ const newsAPIFunctions = {
       let tagButtons = document.querySelectorAll(".tag-btn");
       let articleTagId = "";
 
+      //fetches the new Id of the article we just added, so that we can setup tags in a join-table
       fetch(`http://localhost:8088/articles`)
         .then((r) => r.json())
         .then((articles) => {
@@ -60,29 +61,8 @@ const newsAPIFunctions = {
             }
           });
 
-          const newTags = [];
-
-          tagButtons.forEach((tagButton) => {
-            if (tagButton.classList.contains("btn-primary")) {
-              const clickedTagId = tagButton.id.split("-")[2];
-
-              const newTagRelation = {
-                articleId: articleTagId,
-                tagId: parseInt(clickedTagId),
-              };
-
-              fetch(`http://localhost:8088/article-tags`, {
-                // Replace "url" with your json-server API's URL
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(newTagRelation),
-              }).then(() => {
-                newsPrinterFunctions.printInitialPage();
-              });
-            }
-          });
+          //Calls the function to print tag buttons, sending it the articleId we just grabbed. This saves us a few fetch calls later, trust me
+          newsPrinterFunctions.printAddTag(articleTagId);
         });
     });
   },
@@ -141,6 +121,7 @@ const newsAPIFunctions = {
         });
       });
   },
+  //Deletes a single article-tag relation from the API, using ids contained in the event target button
   deleteTagFromArticle : () => {
     const tagToRemove = parseInt(event.target.id.split("-")[2])
     const articleToRemove = parseInt(event.target.id.split("-")[3])
@@ -158,6 +139,7 @@ const newsAPIFunctions = {
       })
     })
   },
+  //Adds a single tag to the API, using ids from the clicked button
   addTagToArticle : () => {
       const tagToAdd = parseInt(event.target.id.split("-")[2])
       const articleToAdd = parseInt(event.target.id.split("-")[3])
