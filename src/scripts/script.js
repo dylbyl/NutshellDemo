@@ -49,7 +49,8 @@ document.getElementById('output-container').onkeydown = function(e) {
 
 //Imports functions for DOM printing and EventListeners
 import newsPrinterFunctions from "./newsPrinter.js";
-import newsListenFunctions from "./newsListeners.js"
+import newsListenFunctions from "./newsListeners.js";
+import tasksEvents from "./tasksEventListener.js";
 
 //If the News link in the Nav Bar is clicked, call a function to print the News section
 document.querySelector("#news-page").addEventListener("click", function() {
@@ -60,3 +61,10 @@ document.querySelector("#news-page").addEventListener("click", function() {
 document.querySelector("#output-container").addEventListener("click", function() {
         newsListenFunctions.checkButton();
     })
+
+tasksEvents.tasksEventListener();
+
+tasksEvents.tasksPageEventListeners();
+
+tasksEvents.taskEditKeypressListener();
+   
