@@ -1,8 +1,10 @@
 
 const event_domPrinter = {
+    //Page Header
     createPageHeader () {
         document.querySelector("#output-container").innerHTML = `<div class = "row"><header><h1>Events</h1></header></div>`
     },
+    //Form to add a new event
     createNewEventForm () {
         const newEventForm =`
         <div class="row eventPage-container">
@@ -31,12 +33,15 @@ const event_domPrinter = {
         `
         return newEventForm
     },
+    //Container to hold all events
     createEventsContainer(){
         return document.querySelector(".eventPage-container").innerHTML += `<div class = "col event-container-column"><section id="events-container"></section></div>`
     },
+    //Function to clear container to "refresh" page after an add, delete, edit, or save change
     clearEvents(){
         return document.querySelector("#events-container").innerHTML = ""
     },
+    //Function to print each event card to the DOM
     printEvents(events){
         const eventsHTMLString = document.querySelector("#events-container").innerHTML += `
         <article id="event-card" class="row event-card shadow p-3 mb-5 rounded">
@@ -52,6 +57,7 @@ const event_domPrinter = {
         </article>`
         return eventsHTMLString;
     },
+    //Function to create an object from the values inputted into the add new event form
     addNewEvent(){
         const nameValue = document.querySelector("#event-name").value
         const dateValue = document.querySelector("#event-date").value.split("T")[0]
@@ -64,11 +70,11 @@ const event_domPrinter = {
             date: dateValue,
             time: timeValue,
             location:locationValue,
-            description:descriptionValue,
-            // userId: username.id
+            description:descriptionValue
         }
         return newEventObject;
     },
+    //Function to build an edit event form
     buildEventEditForm(event){
         const editEventForm = document.querySelector(`#event-card-${event.id}`).innerHTML = `
         <form>
@@ -96,6 +102,7 @@ const event_domPrinter = {
         <button id="save-btn-${event.id}" class="btn btn-info">Save Event</button>`
         return editEventForm;
     },
+    //Function to save changes made in the edit event form
     saveEditedEventObject(eventID){
         const editedEventObject = {
             id: eventID,
@@ -106,15 +113,7 @@ const event_domPrinter = {
             description: document.querySelector("#edit-event-description").value
         }
         return editedEventObject
-    },
-    // createLoginBar(){
-    //     document.querySelector("#output-container").innerHTML = `
-    //     <form id="login-data">
-    //         <input type= "text" id="username-input" placeholder="Username">
-    //         <input type= "password" id="password-input" placeholder="Password">
-    //     </form>
-    //     <button type="submit" id="login-btn">Login</button>`
-    // }
+    }
 }
 
 export default event_domPrinter 

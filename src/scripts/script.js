@@ -4,6 +4,7 @@ import newsListenFunctions from "./newsListeners.js"
 
 sessionStorage.setItem("userId", 1)
 
+//Calling all event listeners for 'Events'
 event_eventListener.eventsPageListener()
 event_eventListener.addNewEventListener()
 event_eventListener.deleteEventListener()

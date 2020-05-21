@@ -27,22 +27,16 @@
   ],
   "articles": [
     {
-      "id": 1,
-      "title": "Coronavirus: Health workers face violent attacks in Mexico",
-      "url": "https://www.bbc.com/news/world-latin-america-52676939",
-      "synopsis": "coronavirus is bad",
-      "date": "2020/05/18",
-      "userId": 3,
+      "id": 2,
       "title": "Stocks mixed as Fed and Treasury chiefs testify: May 19, 2020",
       "url": "https://www.cnn.com/business/live-news/stock-market-news-051820-duplicate-2/index.html",
       "synopsis": "hiiii",
       "date": "2020/5/19",
+      "userId": 3,
       "tags": [
         "Stocks",
         "asd"
-      ],
-      "userId": 3,
-      "id": 2
+      ]
     },
     {
       "title": "Coronavirus: Health workers face violent attacks in Mexico",
@@ -151,7 +145,7 @@
       "id": 15,
       "name": "Homecoming",
       "date": "2020-07-31",
-      "time": "18:00",
+      "time": "18:01",
       "location": "City Park",
       "description": "5K/Half Marathon race, food cart festival, fireworks, boat race"
     },
