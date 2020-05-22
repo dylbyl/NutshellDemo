@@ -1,4 +1,5 @@
 import registerEventListener from './registerEventListener.js';
+import nutLogin from './login.js'
 // Creating an object for storing the register functions
 const registerFetchFunctions = {
 	submitNewUser: (userObject) => {
@@ -36,8 +37,7 @@ const registerFetchFunctions = {
 								},
 								body: JSON.stringify(userObject)
 							}).then(() => {
-								document.querySelector(`#output-container`).innerHTML =
-									'<p>Registration successful, you may now ! Link this login';
+								nutLogin.loginFormPrinter();
 							});
 							// If username is taken then prints error message
 						} else if (userBoolean === false) {
