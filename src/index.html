@@ -8,6 +8,30 @@
     <title>Nutshell</title>
 </head>
 <body>
+  <div id="login-modal" class="modal">
+  
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <img src="images/nutshell-login.png" alt="Avatar" class="avatar">
+      </div>
+  
+      <div class="login-container">
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+          
+        <button type="submit">Login</button>
+       
+      </div>
+  
+      <div class="login-container" style="background-color:#f1f1f1">
+    
+        <span class="psw"><a href="#">Register Account</a></span>
+      </div>
+    </form>
+  </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Nutshell</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,6 +55,7 @@
         </div>
       </nav>
 
+     
       
     
     <section id="output-container"></section>

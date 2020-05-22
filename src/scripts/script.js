@@ -1,7 +1,14 @@
 import event_eventListener from "./event-eventListeners.js"
+import nutLogin from "./login.js"
 
-sessionStorage.setItem("userId", 1)
-sessionStorage.setItem("username", "user1")
+
+
+// sessionStorage.setItem("userId", 1)
+// sessionStorage.setItem("username", "user1")
+
+if (sessionStorage.getItem("userId") == null){
+	nutLogin.activateModal()
+} 
 
 //Calling all event listeners for 'Events'
 event_eventListener.eventsPageListener()
@@ -15,7 +22,7 @@ import chatEventListeners from './chatEventListeners.js';
 // Importing the chat api functions
 import chatAPI from './chatAPI.js';
 // Creating a fake loggin in user
-sessionStorage.setItem('userId', 1);
+// sessionStorage.setItem('userId', 1);
 // Creating an event listener for when the user clicks on the chat tab on the nav bar
 document.querySelector(`#chat-page`).addEventListener('click', (chatEvent) => {
 	// Loading the chat page
