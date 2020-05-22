@@ -2,7 +2,7 @@
 const registerDOMPrinter = {
         // Creating a function that prints the register form to the DOM
 	printRegisterForm: () => {
-        document.querySelector(`#output-container`).innerHTML = `<div id="register-form-container">
+        document.querySelector(`#login-container`).innerHTML = `<div id="register-form-container">
         <h3>Register</h3>
         <input type="text" id="register-user-name" placeholder="username">
 <input type="text" id="register-email" placeholder="email">      

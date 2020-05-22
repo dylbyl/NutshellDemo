@@ -101,6 +101,36 @@
       "username": "354321441",
       "password": "441241421",
       "id": 17
+    },
+    {
+      "email": "user7@email.com",
+      "username": "user7",
+      "password": "test",
+      "id": 18
+    },
+    {
+      "email": "user8@email.com",
+      "username": "user8",
+      "password": "test",
+      "id": 19
+    },
+    {
+      "email": "user9@email.com",
+      "username": "user9",
+      "password": "test",
+      "id": 20
+    },
+    {
+      "email": "user11@email.com",
+      "username": "user11",
+      "password": "test",
+      "id": 21
+    },
+    {
+      "email": "user12@email.com",
+      "username": "user12",
+      "password": "test",
+      "id": 22
     }
   ],
   "articles": [
