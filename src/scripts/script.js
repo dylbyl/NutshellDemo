@@ -1,4 +1,6 @@
 import event_eventListener from "./event-eventListeners.js"
+import registerDomPrinter from './registerDomPrinter.js'
+import registerEventListener from './registerEventListener.js'
 
 sessionStorage.setItem("userId", 1)
 sessionStorage.setItem("username", "user1")
@@ -16,6 +18,13 @@ import chatEventListeners from './chatEventListeners.js';
 import chatAPI from './chatAPI.js';
 // Creating a fake loggin in user
 sessionStorage.setItem('userId', 1);
+
+// Directing the user to the register form page when the site loads
+registerDomPrinter.printRegisterForm()
+document.querySelector(`#register-user-submit`).addEventListener("click", clickEvent =>{
+	registerEventListener.submitRegisterForm()
+})
+
 // Creating an event listener for when the user clicks on the chat tab on the nav bar
 document.querySelector(`#chat-page`).addEventListener('click', (chatEvent) => {
 	// Loading the chat page
