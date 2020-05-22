@@ -7,17 +7,32 @@ const event_eventListener = {
         document.querySelector("#events-page").addEventListener("click", function(){
             if(event.target.id === "events-page"){
                 event_domPrinter.createPageHeader()
-                document.querySelector("#output-container").innerHTML += event_domPrinter.createNewEventForm()
+                event_domPrinter.createAddEventButton()
                 event_domPrinter.createEventsContainer()
                 event_apiManager.getAllEvents()
             }
         })
     },
     //If "Add New Event" button is clicked, this event listener calls the fetch call in apiManager to add an event to JSON and prints it to the DOM
+    addFormEventListener(){
+        document.querySelector("#output-container").addEventListener("click", function(){
+            if(event.target.id === "add-form-btn"){
+                document.querySelector(".event-form-column").innerHTML = event_domPrinter.createNewEventForm()
+            }
+        })
+    },
     addNewEventListener(){
         document.querySelector("#output-container").addEventListener("click", function(){
             if(event.target.id === "add-event-btn"){
                 event_apiManager.addEvent()
+            }
+        })
+    },
+    cancelEventListener(){
+        document.querySelector("#output-container").addEventListener("click", function(){
+            if(event.target.id === "cancel-btn"){
+                document.querySelector(".event-form-column").innerHTML = ""
+                event_domPrinter.createAddEventButton()
             }
         })
     },
