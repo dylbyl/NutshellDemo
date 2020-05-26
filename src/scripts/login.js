@@ -40,8 +40,6 @@ const nutLogin = {
                         sessionStorage.setItem("username", user[0].username);
                         nutLogin.deactivateModal();
                         newsPrinterFunctions.printSplashPage();
-						// Forcing reload of page to refresh and clear the user correctly
-						location.reload(true);
 						document.querySelector('#login-email').value = '';
 						document.querySelector('#login-password').value = '';
 
@@ -80,6 +78,7 @@ const nutLogin = {
 		document.querySelector('#logout').addEventListener('click', () => {
             sessionStorage.setItem('userId', null);
             sessionStorage.setItem("username", null);
+            newsPrinterFunctions.printSplashPage();
 			sessionStorage.clear();
 			// Redirecting to splash page
 			window.location.href = 'http://127.0.0.1:5500/';
