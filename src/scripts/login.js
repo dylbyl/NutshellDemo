@@ -59,7 +59,10 @@ const nutLogin = {
 			// Directing the user to the register form page when the site loads
 			registerDomPrinter.printRegisterForm();
 			document.querySelector(`#register-user-submit`).addEventListener('click', (clickEvent) => {
-				registerEventListener.submitRegisterForm();
+                registerEventListener.submitRegisterForm();
+                // nutLogin.loginFormPrinter()
+                location.reload(true);
+                window.location.href = 'http://127.0.0.1:5500/'
 			});
 		});
 	},
