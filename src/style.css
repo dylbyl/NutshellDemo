@@ -146,11 +146,19 @@ article:first-child{
 
 .news-btn{
     margin: 1em;
-    color: white;
 }
 
-a{
-    color: white;
+.btn-primary{
+    background-color: #e85f09;
+    border-color: #e85f09;
+}
+
+.orange-text{
+    color: #e85f09;
+}
+
+.light-orange-text{
+    color: #f5a573;
 }
 
 .news-card{
@@ -165,6 +173,12 @@ a{
 .tag-select{
     font-weight: bold;
     margin: 1em;
+}
+
+#splash-info{
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-bottom: 10vh;
 }
 
 /* Full-width input fields */

@@ -1,5 +1,6 @@
-import registerDomPrinter from './registerDomPrinter.js';
-import registerEventListener from './registerEventListener.js';
+import registerDomPrinter from './registerDomPrinter.js'
+import registerEventListener from './registerEventListener.js'
+import newsPrinterFunctions from './newsPrinter.js'
 import chatEventListeners from './chatEventListeners.js';
 
 //The HTML for the email and password in the modal
@@ -36,9 +37,9 @@ const nutLogin = {
 					if (user.length != 0) {
 						//Sets the userId in session storage to the id of the user that was fetched, deactivates the modal, and clears the values in the form
 						sessionStorage.setItem('userId', user[0].id);
-						nutLogin.deactivateModal();
-						// Forcing reload of page to refresh and clear the user correctly
-						location.reload(true);
+                        sessionStorage.setItem("username", user[0].username);
+                        nutLogin.deactivateModal();
+                        location.reload(true);
 						document.querySelector('#login-email').value = '';
 						document.querySelector('#login-password').value = '';
 
@@ -75,7 +76,9 @@ const nutLogin = {
 	//Listens for the logout button, sets the userId in session storage to null, and activates the login modal.
 	logoutListener() {
 		document.querySelector('#logout').addEventListener('click', () => {
-			sessionStorage.setItem('userId', null);
+            sessionStorage.setItem('userId', null);
+            sessionStorage.setItem("username", null);
+            newsPrinterFunctions.printSplashPage();
 			sessionStorage.clear();
 			// Redirecting to splash page
 			window.location.href = 'http://127.0.0.1:5500/';
