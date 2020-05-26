@@ -1,7 +1,7 @@
  //Input a userId into the arguments and place the values from the task form inside of an object.
  const createTaskObject = (idOfUser) => {
     return {
-        taskName: `${document.querySelector("#task-name").value}`,
+        taskName: `${document.querySelector("#new-name").value}`,
         dueDate: `${document.querySelector("#task-date").value}`,
         isCompleted: false,
         userId: idOfUser
@@ -28,7 +28,6 @@ const tasksAPIManager = {
         })
     },
 
-    //{ "isCompleted": true }
     //Input a task and a task object value in braces in the arguments to patch the value of a specific task in the tasks array in nutshell.json
     //Example of a taskObjectValue to input in the arguments:  { "isCompleted": true }
     patchTask(taskId, taskObjectValue) {
