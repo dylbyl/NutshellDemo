@@ -354,6 +354,33 @@
       "location": "ZOOOM!",
       "description": "Work on finishing touches for group project",
       "userId": "4"
+    },
+    {
+      "name": "Group Project Work",
+      "date": "2020-05-26",
+      "time": "16:00",
+      "location": "Barry's events page",
+      "description": "Tester input to verify login",
+      "userId": "1",
+      "id": 30
+    },
+    {
+      "name": "Group Project Work",
+      "date": "2020-05-26",
+      "time": "16:00",
+      "location": "Mike's Events Page",
+      "description": "Testing input to verify login",
+      "userId": "2",
+      "id": 31
+    },
+    {
+      "name": "Group Project Work",
+      "date": "2020-05-26",
+      "time": "16:00",
+      "location": "Dylan's Events page",
+      "description": "Testing input to verify login ",
+      "userId": "3",
+      "id": 32
     }
   ],
   "messages": [
