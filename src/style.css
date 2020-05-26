@@ -52,7 +52,6 @@ article:first-child{
 }
 .col.event-form-column{
     margin: 2em;
-    margin-right: 9em;
     padding: 1em;   
 } 
 #events-container{
@@ -62,8 +61,8 @@ article:first-child{
     height: 80%;
 }
 .col.event-container-column {
-    height: 85vh;
-    width: 50vw;
+    height: 65vh;
+    width: 75vw;
 }
 #chat-container{
     height: 25vh;

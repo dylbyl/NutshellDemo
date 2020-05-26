@@ -69,6 +69,15 @@ const event_apiManager = {
             event_apiManager.getAllEvents()
         }) 
     },
+    filterEventsByMonth(){
+        return fetch(`http://localhost:8088/events/`)
+        .then(r => r.json())
+        .then(parsedEvents => {
+            const dateArray = parsedEvents.map(event => event.date)
+            const monthArray = dateArray.map(date => date.split("-")[1])
+            console.log(monthArray)
+        })
+    }
 }
 
 export default event_apiManager
