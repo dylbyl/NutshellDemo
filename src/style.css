@@ -81,6 +81,12 @@ article:first-child{
     align-items: center;
     margin-left: 1em;
 }
+#chat-output button{
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+    border-radius: 5 px;
+}
 .edit-chat-message{
     margin-left: 2em;
     font-size: 15px;

@@ -37,7 +37,9 @@ const registerFetchFunctions = {
 								},
 								body: JSON.stringify(userObject)
 							}).then(() => {
-								nutLogin.loginFormPrinter();
+								location.reload(true);
+                				window.location.href = 'http://127.0.0.1:5500/'
+
 							});
 							// If username is taken then prints error message
 						} else if (userBoolean === false) {
