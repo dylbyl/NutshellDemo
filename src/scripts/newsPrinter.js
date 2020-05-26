@@ -164,15 +164,13 @@ const newsPrinterFunctions = {
 
   printSplashPage : () => {
 
-    const currentUsername = sessionStorage.getItem("username");
-
     document.querySelector("#output-container").innerHTML = ``;
     document.querySelector("#output-container").innerHTML = `
       <div class="imgcontainer">
         <img src="images/nutshell-login.png" alt="Avatar" class="avatar">
       </div>
       <section id="splash-info">
-        <h2>Hello <b class="light-orange-text">${currentUsername}</b>!</h2>
+        <h2>Hello <b class="light-orange-text">World</b>!</h2>
         <p>Welcome to <b class="orange-text">Nutshell</b>, your one-stop productivity dashboard. With Nutshell, you can save news articles for later viewing, jot down future events and tasks, and even chat with other users. Our site is meant as a catch-all for what's most important to you and your work. This is your life, in a nutshell.</p>
         <h4>News</h4>
         <p>With the <b class="orange-text">News</b> tab, you can save any article that tickles your fancy. Just fill in the article name, URL, synopsis, and topic tags. Your much-needed posts are saved, and are able to be viewed, edited, or deleted at a moment's notice. Each topic tag can be clicked to filter articles by tag, as well. News will show your saved posts and only your posts, ensuring that your private ideas stay private.</p>

@@ -39,7 +39,7 @@ const nutLogin = {
 						sessionStorage.setItem('userId', user[0].id);
                         sessionStorage.setItem("username", user[0].username);
                         nutLogin.deactivateModal();
-                        newsPrinterFunctions.printSplashPage();
+                        location.reload(true);
 						document.querySelector('#login-email').value = '';
 						document.querySelector('#login-password').value = '';
 
