@@ -43,6 +43,9 @@ const newsListenFunctions = {
                 newsAPIFunctions.addTagToArticle();
             }
         }
+        else if (event.target.id.includes("splash-page")){
+            newsPrinterFunctions.printSplashPage();
+        }
         
     }
 }
