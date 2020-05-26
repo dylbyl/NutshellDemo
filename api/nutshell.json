@@ -245,16 +245,30 @@
     {
       "taskName": "Test your code",
       "dueDate": "",
-      "isCompleted": true,
+      "isCompleted": false,
       "userId": "1",
       "id": 2
     },
     {
       "taskName": "Testing submit !!!!",
       "dueDate": "2020-05-21",
-      "isCompleted": false,
+      "isCompleted": true,
       "userId": "1",
       "id": 3
+    },
+    {
+      "taskName": "Finish the tasks stretch goals",
+      "dueDate": "2020-05-25",
+      "isCompleted": true,
+      "userId": "1",
+      "id": 4
+    },
+    {
+      "taskName": "Read chapter in library book",
+      "dueDate": "2020-05-25",
+      "isCompleted": true,
+      "userId": "1",
+      "id": 5
     }
   ],
   "events": [

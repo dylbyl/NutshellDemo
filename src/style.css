@@ -1,11 +1,36 @@
+.task-container{
+    /* border: 1px solid black; */
+    width: fit-content;
+    display: flex;
+
+}
+
 .incomplete-task-container {
     border: 1px solid black;
-    width: 40vw;
-    margin: 5vw;
+    width: 45vw;
+    height: 70vh;
+    margin: 2vw;
+    margin-top: 0;
+    overflow: scroll;
 }
 
 .incomplete-task-list>h3{
     text-align: center;
+    font-weight: bold;
+}
+
+.complete-task-container {
+    border: 1px solid black;
+    width: 45vw;
+    height: 70vh;
+    margin: 2vw;
+    margin-top: 0;
+    overflow: scroll;
+}
+
+.complete-task-list>h3{
+    text-align: center;
+    font-weight: bold;
 }
 
 .new-task-container {
@@ -13,13 +38,27 @@
     width: 30vw;
     text-align: center;
     position: relative;
-    left: 35vw;
+    left: 10vw;
+}
+
+.percent-complete-div {
+    /* border: 1px solid pink; */
+    padding-bottom: 0;
+    width: 30vw;
+    height: 5vh;
+    text-align: center;
+    position: relative;
+    left: 10vw;
+    font-weight: bold;
+    font-size: 2em;
 }
 
 .new-task-btn {
     width: 10vw;
     height: 5vh;
 }
+
+
 
 #output-container{
     margin: 1em;

@@ -52,7 +52,13 @@ const tasksEvents = {
                 //Changes the isCompleted bool to true which removes it from the incomplete task list
                 tasksAPIManager.patchTask(taskId, { "isCompleted": true })
                     .then(tasksDOMPrinter.printTasksPage)
-            } else if (event.target.id.includes("task-name-link")) {
+            } else if (event.target.id.includes("complete-task-checkbox")) {
+                //Gets the id number from the end of the id and stores it in taskId
+                const taskId = event.target.id.split("-").pop()
+                //Changes the isCompleted bool to true which removes it from the incomplete task list
+                tasksAPIManager.patchTask(taskId, { "isCompleted": false })
+                    .then(tasksDOMPrinter.printTasksPage)
+            }else if (event.target.id.includes("task-name-link")) {
                 const taskId = event.target.id.split("-").pop()
                 tasksAPIManager.singleTaskFetch(taskId)
                     .then(parsedFetch => parsedFetch.forEach(task =>
