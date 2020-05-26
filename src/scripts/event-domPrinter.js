@@ -4,11 +4,12 @@ const event_domPrinter = {
     createPageHeader () {
         document.querySelector("#output-container").innerHTML = `<div class = "row"><header><h1>Events</h1></header></div>`
     },
+    createAddEventButton(){
+        document.querySelector("#output-container").innerHTML += `<div class="row eventPage-container"><div class="col event-form-column"><button class="btn btn-info shadow p-3 mb-5 rounded" id="add-form-btn">Add New Event</button></div></div>`
+    },
     //Form to add a new event
     createNewEventForm () {
         const newEventForm =`
-        <div class="row eventPage-container">
-        <div class="col event-form-column">
         <form id="event-form" class="shadow-lg p-3 mb-5 rounded">
             <fieldset>
             <label for="event-name">Event Name:</label>
@@ -16,7 +17,7 @@ const event_domPrinter = {
             </fieldset>
             <fieldset>
             <label for="event-date">Event date and time:</label>
-            <input type="datetime-local" id="event-date" placeholder="Event Date">
+            <input type="datetime-local" id="event-date" placeholder="Event Date"><span style="color:tomato;"><em> Required</em></span>
             </fieldset>
             <fieldset>
             <label for="event-location">Event location:</label>
@@ -24,12 +25,11 @@ const event_domPrinter = {
             </fieldset>
             <fieldset>
             <label for="event-description">Event description:</label>
-            <input id="event-description">
+            <input type="text" id="event-description">
             </fieldset>
         </form>
-        <button class="btn btn-info shadow p-3 mb-5 rounded" id="add-event-btn">Add New Event</button>
-        </div>
-        </div>
+        <button class="btn btn-info shadow p-3 mb-5 rounded" id="add-event-btn">Add Event</button>
+        <button class="btn btn-info shadow p-3 mb-5 rounded" id="cancel-btn">Cancel</button>
         `
         return newEventForm
     },
@@ -70,7 +70,8 @@ const event_domPrinter = {
             date: dateValue,
             time: timeValue,
             location:locationValue,
-            description:descriptionValue
+            description:descriptionValue,
+            userId: sessionStorage.getItem("userId")
         }
         return newEventObject;
     },
@@ -110,7 +111,8 @@ const event_domPrinter = {
             date: document.querySelector("#edit-event-date").value,
             time: document.querySelector("#edit-event-time").value,
             location: document.querySelector("#edit-event-location").value,
-            description: document.querySelector("#edit-event-description").value
+            description: document.querySelector("#edit-event-description").value,
+            userId: sessionStorage.getItem("userId")
         }
         return editedEventObject
     }

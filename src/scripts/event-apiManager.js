@@ -3,7 +3,7 @@ import event_domPrinter from "./event-domPrinter.js"
 const event_apiManager = {
     //Fetch and print all events
     getAllEvents(){
-        return fetch(`http://localhost:8088/events`)
+        return fetch(`http://localhost:8088/events?userId=${sessionStorage.getItem("userId")}`)
         .then(r => r.json())
         .then(parsedEvents => {
             //Sort date and time in ascending order
@@ -27,6 +27,7 @@ const event_apiManager = {
     },
     //Fetch to add a new event
     addEvent(){
+        event_domPrinter.addNewEvent.userId = sessionStorage.getItem("userId")
         return fetch("http://localhost:8088/events", {
             method: "POST",
             headers: {
@@ -69,6 +70,45 @@ const event_apiManager = {
             event_apiManager.getAllEvents()
         }) 
     },
+    filterEventsByMonth(){
+        return fetch(`http://localhost:8088/events/`)
+        .then(r => r.json())
+        .then(parsedEvents => {
+            const monthNames = {
+                1:"January", 
+                2:"February", 
+                3:"March", 
+                4:"April", 
+                5:"May", 
+                6:"June", 
+                7:"July", 
+                8:"August", 
+                9:"September", 
+                10:"October", 
+                11:"November", 
+                12:"December"
+            }
+            const monthNamesArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+            const dateArray = parsedEvents.map(event => event.date)
+            const monthArray = dateArray.sort((a,b) => a.split("-")[1] - b.split("-")[1]).map(date => parseInt(date.split("-")[1]))
+            console.log(monthArray)
+            console.log(monthNames["January"])
+            console.log(monthNamesArray[1])
+            console.log(monthArray[0])
+            for (let i = 0; i < parsedEvents.length; i++){
+                for (let n = 0; i < monthArray.length; n++){
+                    console.log("Inside second for loop")
+                    // if(monthNames[n + 1] === monthArray[i]){
+                    //     console.log(`${monthNames[n + 1]}`)
+                    // }
+                // if(monthArray[i] === monthNames[i]){
+                //     console.log(`${monthArray[i]} equals ${monthNames[n]}`)
+                //     document.querySelector("#events-container").innerHTML += `${monthNames[n]}`
+                // }
+                }
+            }
+        })
+    }
 }
 
 export default event_apiManager

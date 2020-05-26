@@ -64,9 +64,6 @@
     padding: 1em;
     width: fit-content;
 }
-.eventPage-container{
-    height: 70vh;
-}
 .event-card{
     margin: 1em;
     padding: 1em;
@@ -85,13 +82,16 @@ article:first-child{
     padding: 1em;
     font-weight: bold;
 }
-#add-event-btn{
+#add-form-btn{
     margin-left: 37%;
 }
-.col.event-form-column{
-    margin: 3em;
-    padding: 1em;   
+#add-event-btn, #cancel-btn{
+    margin-left: 10em;
 }
+.col.event-form-column{
+    margin: 1em;
+    padding: 1em;   
+} 
 #events-container{
     margin: 1em;
     padding: 2em;
@@ -99,7 +99,8 @@ article:first-child{
     height: 80%;
 }
 .col.event-container-column {
-    height: 73vh;
+    height: 65vh;
+    width: 75vw;
 }
 #chat-container{
     height: 25vh;

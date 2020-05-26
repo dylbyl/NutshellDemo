@@ -13,11 +13,13 @@ nutLogin.loginEventListenter();
 nutLogin.registerLinkListener();
 nutLogin.logoutListener();
 //Calling all event listeners for 'Events'
-event_eventListener.eventsPageListener();
-event_eventListener.addNewEventListener();
-event_eventListener.deleteEventListener();
-event_eventListener.editEventListener();
-event_eventListener.saveEventListener();
+event_eventListener.eventsPageListener()
+event_eventListener.addFormEventListener()
+event_eventListener.addNewEventListener()
+event_eventListener.cancelEventListener()
+event_eventListener.deleteEventListener()
+event_eventListener.editEventListener()
+event_eventListener.saveEventListener()
 
 // Importing the chat event listener functions
 import chatEventListeners from './chatEventListeners.js';
