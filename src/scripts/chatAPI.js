@@ -3,6 +3,7 @@ import chatScreenFunctions from './chatScreenFunctions.js';
 // Creating a variable for the user IDs of the users in the system to
 // be used when comparing / looping through IDs for messages the user can edit or dlete
 let chatUserIDs;
+let currentUser = parseInt(sessionStorage.userId, 10)
 // Creating an object for storing the chat api functions
 const chatAPI = {
 	// Get user IDs first and store them?
@@ -19,7 +20,6 @@ const chatAPI = {
 	// Creating a function to get all the chat messages
 	getChatMessages: () => {
 		// Setting current user as userId from session storage
-		let currentUser = parseInt(sessionStorage.userId, 10);
 		// Fetching all the messages
 		fetch(`http://localhost:8088/messages`).then((messages) => messages.json()).then((parsedMessages) => {
 			// Declaring the chat username to the username of the userID

@@ -1,5 +1,8 @@
 // Importing the chat api functions
 import chatAPI from './chatAPI.js';
+// Setting the current user via sessionStorage
+let currentUser = parseInt(sessionStorage.userId, 10);
+
 // Creating an object for the event listener functions
 const chatEventListeners = {
 	// Creating a function to load the chat page
@@ -24,7 +27,7 @@ const chatEventListeners = {
 		let time =
 			today.getDate() +
 			'/' +
-			(today.getMonth()+1) +
+			(today.getMonth() + 1) +
 			'/' +
 			today.getFullYear() +
 			' at ' +
@@ -34,7 +37,7 @@ const chatEventListeners = {
 			`:` +
 			today.getSeconds();
 		const messageToSend = {
-			userId: 1,
+			userId: currentUser,
 			message: chatMessage,
 			time: time
 		};
