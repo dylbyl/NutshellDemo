@@ -48,10 +48,10 @@ article:first-child{
     margin-left: 37%;
 }
 #add-event-btn, #cancel-btn{
-    margin-left: 8em;
+    margin-left: 10em;
 }
 .col.event-form-column{
-    margin: 2em;
+    margin: 1em;
     padding: 1em;   
 } 
 #events-container{

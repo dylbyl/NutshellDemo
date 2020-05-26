@@ -70,7 +70,8 @@ const event_domPrinter = {
             date: dateValue,
             time: timeValue,
             location:locationValue,
-            description:descriptionValue
+            description:descriptionValue,
+            userId: sessionStorage.getItem("userId")
         }
         return newEventObject;
     },
@@ -110,7 +111,8 @@ const event_domPrinter = {
             date: document.querySelector("#edit-event-date").value,
             time: document.querySelector("#edit-event-time").value,
             location: document.querySelector("#edit-event-location").value,
-            description: document.querySelector("#edit-event-description").value
+            description: document.querySelector("#edit-event-description").value,
+            userId: sessionStorage.getItem("userId")
         }
         return editedEventObject
     }

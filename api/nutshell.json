@@ -334,7 +334,8 @@
       "date": "2020-05-22",
       "time": "17:00",
       "location": "Huntington, WV",
-      "description": "A grand adventure around the land of Huntington, WV to see where we can find the best milkshake (and also just enjoy milkshakes because TGIF)"
+      "description": "A grand adventure around the land of Huntington, WV to see where we can find the best milkshake (and also just enjoy milkshakes because TGIF)",
+      "userId": 4
     },
     {
       "name": "Birthday Party",
@@ -346,12 +347,13 @@
       "userId": 4
     },
     {
-      "id": 19,
-      "name": "Group Project Work",
-      "date": "2020-05-26",
-      "time": "12:00",
-      "location": "Virtual Classroom",
-      "description": "Work on finishing touches for group project"
+      "id": 29,
+      "name": "Work",
+      "date": "2020-05-27",
+      "time": "21:00",
+      "location": "ZOOOM!",
+      "description": "Work on finishing touches for group project",
+      "userId": "4"
     }
   ],
   "messages": [
