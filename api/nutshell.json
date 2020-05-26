@@ -264,7 +264,8 @@
       "date": "2020-05-31",
       "time": "20:00",
       "location": "Springfield, Illinois",
-      "description": "Charity Event- Gala"
+      "description": "Charity Event- Gala",
+      "userId": 4
     },
     {
       "id": 9,
@@ -272,7 +273,8 @@
       "date": "2020-05-30",
       "time": "12:00",
       "location": "Community Center",
-      "description": "Local High School holding a blood drive"
+      "description": "Local High School holding a blood drive",
+      "userId": 4
     },
     {
       "id": 10,
@@ -280,7 +282,8 @@
       "date": "2020-06-29",
       "time": "08:00",
       "location": "Virtual-Remote",
-      "description": "Virtual Capstone presentation through Zoom"
+      "description": "Virtual Capstone presentation through Zoom",
+      "userId": 4
     },
     {
       "name": "Masquerade",
@@ -296,7 +299,8 @@
       "date": "2020-07-31",
       "time": "09:00",
       "location": "Fayetteville, WV",
-      "description": "Nature hike through paved trails"
+      "description": "Nature hike through paved trails",
+      "userId": 4
     },
     {
       "name": "Quiz",
@@ -312,7 +316,8 @@
       "date": "2020-05-31",
       "time": "14:00",
       "location": "State Park",
-      "description": "5K afternoon trail run "
+      "description": "5K afternoon trail run ",
+      "userId": 4
     },
     {
       "id": 15,
@@ -320,7 +325,8 @@
       "date": "2020-07-31",
       "time": "18:01",
       "location": "City Park",
-      "description": "5K/Half Marathon race, food cart festival, fireworks, boat race"
+      "description": "5K/Half Marathon race, food cart festival, fireworks, boat race",
+      "userId": 4
     },
     {
       "id": 17,
@@ -336,7 +342,16 @@
       "time": "17:00",
       "location": "Mary's apartment",
       "description": "Surprise birthday party for a friend",
-      "id": 18
+      "id": 18,
+      "userId": 4
+    },
+    {
+      "id": 19,
+      "name": "Group Project Work",
+      "date": "2020-05-26",
+      "time": "09:00",
+      "location": "Virtual Classroom",
+      "description": "Work on finishing touches for group project"
     }
   ],
   "messages": [

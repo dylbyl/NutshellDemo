@@ -25,7 +25,7 @@ const event_domPrinter = {
             </fieldset>
             <fieldset>
             <label for="event-description">Event description:</label>
-            <input id="event-description">
+            <input type="text" id="event-description">
             </fieldset>
         </form>
         <button class="btn btn-info shadow p-3 mb-5 rounded" id="add-event-btn">Add Event</button>

@@ -31,8 +31,7 @@ const event_eventListener = {
     cancelEventListener(){
         document.querySelector("#output-container").addEventListener("click", function(){
             if(event.target.id === "cancel-btn"){
-                document.querySelector(".event-form-column").innerHTML = ""
-                event_domPrinter.createAddEventButton()
+                document.querySelector(".event-form-column").innerHTML = `<button class="btn btn-info shadow p-3 mb-5 rounded" id="add-form-btn">Add New Event</button>`
             }
         })
     },

@@ -26,9 +26,6 @@
     padding: 1em;
     width: fit-content;
 }
-/* .eventPage-container{
-    height: 70vh;
-} */
 .event-card{
     margin: 1em;
     padding: 1em;
@@ -50,8 +47,12 @@ article:first-child{
 #add-form-btn{
     margin-left: 37%;
 }
+#add-event-btn, #cancel-btn{
+    margin-left: 8em;
+}
 .col.event-form-column{
-    margin: 3em;
+    margin: 2em;
+    margin-right: 9em;
     padding: 1em;   
 } 
 #events-container{
@@ -61,7 +62,8 @@ article:first-child{
     height: 80%;
 }
 .col.event-container-column {
-    height: 73vh;
+    height: 85vh;
+    width: 50vw;
 }
 #chat-container{
     height: 25vh;
