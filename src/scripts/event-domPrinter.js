@@ -17,7 +17,7 @@ const event_domPrinter = {
             </fieldset>
             <fieldset>
             <label for="event-date">Event date and time:</label>
-            <input type="datetime-local" id="event-date" placeholder="Event Date">
+            <input type="datetime-local" id="event-date" placeholder="Event Date"><span style="color:tomato;"><em> Required</em></span>
             </fieldset>
             <fieldset>
             <label for="event-location">Event location:</label>
