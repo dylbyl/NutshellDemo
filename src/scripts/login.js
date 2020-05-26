@@ -61,8 +61,7 @@ const nutLogin = {
 			document.querySelector(`#register-user-submit`).addEventListener('click', (clickEvent) => {
                 registerEventListener.submitRegisterForm();
                 // nutLogin.loginFormPrinter()
-                location.reload(true);
-                window.location.href = 'http://127.0.0.1:5500/'
+                
 			});
 		});
 	},
