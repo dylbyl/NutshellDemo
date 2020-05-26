@@ -1,31 +1,6 @@
 import tasksDOMPrinter from './tasksDOMPrinter.js'
 import tasksAPIManager from './tasksAPIManager.js'
 
-
-//Script.js
-// import tasksEvents from './tasksEventListener.js'
-
-
-
-// sessionStorage.setItem("userId", 1)
-
-// tasksEvents.tasksEventListener();
-
-// tasksEvents.tasksPageEventListeners();
-
-// tasksPageEventListeners()
-
-/*TODO:
--Make sure you are posting and fetching for a single user.
--Make sure you move everything out of script.js and into your module JS files before you submit a merge request.
-*/
-
-/* List of functions/methods that require a userId to work 
--createTaskObject
--tasksFetch
-*/
-
-
 const tasksEvents = {
 
     //Listens for the tasks button in the navbar to be clicked
@@ -76,22 +51,20 @@ const tasksEvents = {
     },
 
     taskEditKeypressListener() {
-        document.getElementById('output-container').onkeydown = function (e) {
-            if (e.keyCode == 13) {
-                const taskId = event.target.id.split("-").pop()
-                if (event.target.id.includes(`task-name-${taskId}`)) {
-                    
+        document.querySelector('#output-container').addEventListener("keypress", e => {
+            if (e.keyCode === 13) {
+                if (event.target.id.includes(`task-name`)) {
+                    const taskId = event.target.id.split("-").pop()
                     const editedTaskName = document.querySelector(`#task-name-${taskId}`).value
                     const taskObjectValue = { taskName: editedTaskName }
                     tasksAPIManager.patchTask(taskId, taskObjectValue)
                         .then(tasksDOMPrinter.printTasksPage)
-
-
+                    console.log(e.keyCode)
                     console.log(event.target.id)
                 }
             }
         }
-    }
+        )}
 }
 
 export default tasksEvents
