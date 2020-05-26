@@ -131,6 +131,12 @@
       "username": "user12",
       "password": "test",
       "id": 22
+    },
+    {
+      "email": "dylan2@email.com",
+      "username": "user5",
+      "password": "123",
+      "id": 23
     }
   ],
   "articles": [
@@ -146,7 +152,7 @@
       "title": "Coronavirus: Health workers face violent attacks in Mexico",
       "url": "https://www.bbc.com/news/world-latin-america-52676939",
       "synopsis": "coronavirus is bad",
-      "date": "2020/5/21",
+      "date": "2020/5/26",
       "userId": 1,
       "id": 3
     },
@@ -154,7 +160,7 @@
       "title": "Structure fire shuts down part of road",
       "url": "https://www.wsaz.com/content/news/Structure-fire-shuts-down-part-of-road-570627631.html",
       "synopsis": "Crazy stuff",
-      "date": "2020/5/21",
+      "date": "2020/5/26",
       "userId": 1,
       "id": 5
     },
@@ -162,7 +168,7 @@
       "title": "asd",
       "url": "asd",
       "synopsis": "asd",
-      "date": "2020/5/21",
+      "date": "2020/5/26",
       "userId": 1,
       "id": 6
     },
@@ -170,9 +176,33 @@
       "title": "I-64 Lanes shut down after two crashes",
       "url": "https://www.wsaz.com/content/news/I-64-Lanes-shut-down-after-two-crashes-570659451.html",
       "synopsis": "Avoid I-64 for the day!",
-      "date": "2020/5/21",
+      "date": "2020/5/26",
       "userId": 1,
       "id": 7
+    },
+    {
+      "title": "asd",
+      "url": "asd",
+      "synopsis": "asd",
+      "date": "2020/5/26",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "title": "Stocks mixed as Fed and Treasury chiefs testify: May 19, 2020",
+      "url": "https://www.cnn.com/business/live-news/stock-market-news-051820-duplicate-2/index.html",
+      "synopsis": "coronavirus is bad!!!!!!!!",
+      "date": "2020/5/26",
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "title": "Stocks mixed as Fed and Treasury chiefs testify: May 19, 2020",
+      "url": "https://www.cnn.com/business/live-news/stock-market-news-051820-duplicate-2/index.html",
+      "synopsis": "hiiii",
+      "date": "2020/5/26",
+      "userId": 3,
+      "id": 13
     }
   ],
   "article-tags": [
@@ -209,7 +239,37 @@
     {
       "articleId": 7,
       "tagId": 1,
-      "id": 44
+      "id": 48
+    },
+    {
+      "articleId": 8,
+      "tagId": 2,
+      "id": 50
+    },
+    {
+      "articleId": 10,
+      "tagId": 5,
+      "id": 54
+    },
+    {
+      "articleId": 10,
+      "tagId": 3,
+      "id": 55
+    },
+    {
+      "articleId": 11,
+      "tagId": 1,
+      "id": 56
+    },
+    {
+      "articleId": 12,
+      "tagId": 1,
+      "id": 57
+    },
+    {
+      "articleId": 13,
+      "tagId": 1,
+      "id": 58
     }
   ],
   "tags": [

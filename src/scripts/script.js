@@ -69,7 +69,7 @@ document.querySelector("#news-page").addEventListener("click", function() {
 })
 
 //Checks which buttons are being clicked in the News section
-document.querySelector("#output-container").addEventListener("click", function() {
+document.querySelector("body").addEventListener("click", function() {
         newsListenFunctions.checkButton();
     })
 

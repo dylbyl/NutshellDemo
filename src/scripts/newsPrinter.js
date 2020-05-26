@@ -116,6 +116,7 @@ const newsPrinterFunctions = {
 
                             <button class="btn btn-primary news-btn" id="adjusted-news-btn-${idToEdit}">Save Changes</button>
                             <button class="btn btn-primary news-btn" id="cancel-news-btn">Cancel</button>
+                            <section class="edit-message-container"></section>
                         </div>
                     `;
           });
@@ -148,7 +149,6 @@ const newsPrinterFunctions = {
         let found = false;
 
         article["article-tags"].forEach(tagRelation => {
-          console.log(tagRelation.tagId)
           if (tagRelation.tagId === tagToPrint && found === false){
             //If the article has a tag id that matches the search tag id, prints it to the DOM
             document.querySelector(
@@ -161,6 +161,31 @@ const newsPrinterFunctions = {
       })
     })
   },
+
+  printSplashPage : () => {
+
+    const currentUsername = sessionStorage.getItem("username");
+
+    document.querySelector("#output-container").innerHTML = ``;
+    document.querySelector("#output-container").innerHTML = `
+      <div class="imgcontainer">
+        <img src="images/nutshell-login.png" alt="Avatar" class="avatar">
+      </div>
+      <section id="splash-info">
+        <h2>Hello <b class="light-orange-text">${currentUsername}</b>!</h2>
+        <p>Welcome to <b class="orange-text">Nutshell</b>, your one-stop productivity dashboard. With Nutshell, you can save news articles for later viewing, jot down future events and tasks, and even chat with other users. Our site is meant as a catch-all for what's most important to you and your work. This is your life, in a nutshell.</p>
+        <h4>News</h4>
+        <p>With the <b class="orange-text">News</b> tab, you can save any article that tickles your fancy. Just fill in the article name, URL, synopsis, and topic tags. Your much-needed posts are saved, and are able to be viewed, edited, or deleted at a moment's notice. Each topic tag can be clicked to filter articles by tag, as well. News will show your saved posts and only your posts, ensuring that your private ideas stay private.</p>
+        <h4>Chat</h4>
+        <p><b class="orange-text">Chat</b> is your go-to discussion destination. Have a question for your team? Want to share a workplace antecdote? Head to Chat's public messageboard, and talk to your heart's content. A slip of the finger can easily be edited or deleted after posting.</p>
+        <h4>Events</h4>
+        <p>Plan your schedule more efficiently with the <b class="orange-text">Events</b> tab. Simply input an event name, date, location, and description to add it to your upcoming itinerary. Events are sorted by date, and the next event is accentuated. Rest easy knowing that you can put your full focus into the next event while the ones beyond that are safe in Nutshell—ready to be tackled when you can handle them.</p>
+        <h4>Tasks</h4>
+        <p>Why keep up with a physical to-do list when Nutshell's <b class="orange-text">Tasks</b> tab exists? Jot down a task and its expected completion date to keep a running list of the actions that are most important to you. No more haphazardly memorized lists or shoddily scribbled bullets. Nutshell is here to help organize the task at hand.</p>
+      </section>
+    `;
+
+  }
 };
 
 //Called by the printInitalPage function and other rare circumstances to print every article saved in the local API
@@ -181,15 +206,24 @@ const printAllArticles = () => {
           document.querySelector(
             "#news-results-container"
           ).innerHTML += printSingleArticle(article, article.user.username, article.user.id);
+
+          
         });
 
         //Iterates over each tag in the join table of the API and adds them to the appropriate article card
         for (let i = 0; i < tagRelationArray.length; i++) {
-          document.querySelector(
-            `#tag-container-${tagRelationArray[i].article.id}`
-          ).innerHTML += `
-                    <a href="#" id="tag-link-${tagRelationArray[i].tagId}">${tagRelationArray[i].tag.name}<a> 
-                    `;
+          //If the DOM query selector is null, it means we're trying to print tags to ana rticle by another user, which we don't want to do
+          console.log(tagRelationArray[i])
+          if(tagRelationArray[i].article != undefined){
+          if(document.querySelector(
+            `#tag-container-${tagRelationArray[i].article.id}`) != null){
+              document.querySelector(
+                `#tag-container-${tagRelationArray[i].article.id}`
+              ).innerHTML += `
+                        <a class="light-orange-text" href="#" id="tag-link-${tagRelationArray[i].tagId}">${tagRelationArray[i].tag.name}<a> 
+                        `;
+            }
+          }
         }
       });
   });
@@ -200,30 +234,26 @@ const printSingleArticle = (articleToPrint, savedUsername, savedUserId) => {
   //creates a string using all the article's saved information, including the username of the person who saved it and the above tag links
 
   const currentUserId = parseInt(sessionStorage.getItem("userId"))
-  let buttonStringHTML = ""
+  let cardStringHTML = ""
 
-  console.log(savedUserId)
-
-  //Only shows the edit and delete buttons if the current user is the same as the one that added the article
+  //Only prints the article if the current user is the same as the one that added the article
   if(currentUserId === savedUserId){
-      buttonStringHTML = `
-        <button class="btn btn-primary news-btn" id="edit-news-${articleToPrint.id}">Edit</button>
-        <button class="btn btn-primary news-btn" id="delete-news-${articleToPrint.id}">Delete</button>
+      cardStringHTML = `
+      <div id="news-result-${articleToPrint.id}" class="card news-card" style="width: 23rem;">
+        <div class="card-body">
+            <h5 class="card-title"><b><a class="orange-text" href="${articleToPrint.url}">${articleToPrint.title}</a></b></h5>
+            <p id="tag-container-${articleToPrint.id}"></p>
+            <p class="card-text"><b>${articleToPrint.date}:</b> ${articleToPrint.synopsis}</p>
+            <p class="card-text"><b>Saved by:</b> ${savedUsername}</p>
+            <button class="btn btn-primary news-btn" id="edit-news-${articleToPrint.id}">Edit</button>
+            <button class="btn btn-primary news-btn" id="delete-news-${articleToPrint.id}">Delete</button>
+        </div>
+      </div>
       `
   }
 
   //Returns an HTML string using all of the article info, as well as POSSIBLY the edit and delete buttons
-  return `
-    <div id="news-result-${articleToPrint.id}" class="card news-card" style="width: 23rem;">
-        <div class="card-body">
-            <h5 class="card-title"><b><a href="${articleToPrint.url}">${articleToPrint.title}</a></b></h5>
-            <p id="tag-container-${articleToPrint.id}"></p>
-            <p class="card-text"><b>${articleToPrint.date}:</b> ${articleToPrint.synopsis}</p>
-            <p class="card-text"><b>Saved by:</b> ${savedUsername}</p>
-            ${buttonStringHTML}
-        </div>
-    </div>
-    `;
+  return cardStringHTML;
 };
 
 export default newsPrinterFunctions;

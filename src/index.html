@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
   <meta content="utf-8" http-equiv="encoding">
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <title>Nutshell</title>
+  <link rel="stylesheet" href="style.css">
+    <title>Nutshell</title>
 </head>
 
 <body>
@@ -43,7 +43,7 @@
 
   </div>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Nutshell</a>
+    <a class="navbar-brand" href="#" id="splash-page">Nutshell</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -70,7 +70,24 @@
 
 
 
-  <section id="output-container"></section>
+  <section id="output-container">
+    <div class="imgcontainer">
+      <img src="images/nutshell-login.png" alt="Avatar" class="avatar">
+    </div>
+    <section id="splash-info">
+      <h2>Hello <b class="light-orange-text">World</b>!</h2>
+      <p>Welcome to <b class="orange-text">Nutshell</b>, your one-stop productivity dashboard. With Nutshell, you can save news articles for later viewing, jot down future events and tasks, and even chat with other users. Our site is meant as a catch-all for what's most important to you and your work. This is your life, in a nutshell.</p>
+      <h4>News</h4>
+      <p>With the <b class="orange-text">News</b> tab, you can save any article that tickles your fancy. Just fill in the article name, URL, synopsis, and topic tags. Your much-needed posts are saved, and are able to be viewed, edited, or deleted at a moment's notice. Each topic tag can be clicked to filter articles by tag, as well. News will show your saved posts and only your posts, ensuring that your private ideas stay private.</p>
+      <h4>Chat</h4>
+      <p><b class="orange-text">Chat</b> is your go-to discussion destination. Have a question for your team? Want to share a workplace antecdote? Head to Chat's public messageboard, and talk to your heart's content. A slip of the finger can easily be edited or deleted after posting.</p>
+      <h4>Events</h4>
+      <p>Plan your schedule more efficiently with the <b class="orange-text">Events</b> tab. Simply input an event name, date, location, and description to add it to your upcoming itinerary. Events are sorted by date, and the next event is accentuated. Rest easy knowing that you can put your full focus into the next event while the ones beyond that are safe in Nutshell—ready to be tackled when you can handle them.</p>
+      <h4>Tasks</h4>
+      <p>Why keep up with a physical to-do list when Nutshell's <b class="orange-text">Tasks</b> tab exists? Jot down a task and its expected completion date to keep a running list of the actions that are most important to you. No more haphazardly memorized lists or shoddily scribbled bullets. Nutshell is here to help organize the task at hand.</p>
+    </section>
+
+  </section>
 
   <script type="module" src="./scripts/script.js"></script>
 

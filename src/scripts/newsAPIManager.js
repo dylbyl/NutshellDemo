@@ -29,7 +29,8 @@ const newsAPIFunctions = {
     const titleInput = document.querySelector("#title-input").value;
     const synopsisInput = document.querySelector("#synopsis-input").value;
     const urlInput = document.querySelector("#url-input").value;
-    //splits the tag input around commas
+
+    if (titleInput != "" && synopsisInput != "" && urlInput != ""){
 
     //Creates a new object using all of the above data
     const articleToAdd = {
@@ -65,6 +66,10 @@ const newsAPIFunctions = {
           newsPrinterFunctions.printAddTag(articleTagId);
         });
     });
+  }
+  else{
+    document.querySelector("#add-news-container").innerHTML += `<b class="light-orange-text">Please type something in all three fields<b>`
+  }
   },
 
   //A function for editing an existing article in the API
@@ -81,6 +86,8 @@ const newsAPIFunctions = {
     const titleInput = document.querySelector("#edit-title-input").value;
     const synopsisInput = document.querySelector("#edit-synopsis-input").value;
     const urlInput = document.querySelector("#edit-url-input").value;
+
+    if (titleInput != "" && synopsisInput != "" && urlInput != ""){
 
     //Creates an article object based on the above info
     const articleToAdd = {
@@ -101,6 +108,10 @@ const newsAPIFunctions = {
     }).then(() => {
       newsPrinterFunctions.printInitialPage();
     });
+  }
+  else{
+    document.querySelector(".edit-message-container").innerHTML += `<b class="light-orange-text">Please type something in all three fields<b>`
+  }
   },
   //Accepts an id as a paramter, simply deletes the item with that ID from the API
   deleteArticleFromAPI: (idToDelete) => {

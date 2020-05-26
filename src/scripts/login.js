@@ -1,5 +1,6 @@
 import registerDomPrinter from './registerDomPrinter.js'
 import registerEventListener from './registerEventListener.js'
+import newsPrinterFunctions from './newsPrinter.js'
 
 //The HTML for the email and password in the modal
 const loginForm = () => {
@@ -35,7 +36,9 @@ const nutLogin = {
                     if (user.length != 0) {
                         //Sets the userId in session storage to the id of the user that was fetched, deactivates the modal, and clears the values in the form
                         sessionStorage.setItem("userId", user[0].id);
+                        sessionStorage.setItem("username", user[0].username);
                         nutLogin.deactivateModal();
+                        newsPrinterFunctions.printSplashPage();
                         document.querySelector("#login-email").value = "";
                         document.querySelector("#login-password").value = "";
 
@@ -75,6 +78,7 @@ const nutLogin = {
     logoutListener() {
         document.querySelector("#logout").addEventListener("click", () => {
             sessionStorage.setItem("userId", null);
+            sessionStorage.setItem("username", null);
             nutLogin.activateModal();
         })
     }
