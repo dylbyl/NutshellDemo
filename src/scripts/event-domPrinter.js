@@ -9,6 +9,8 @@ const event_domPrinter = {
     },
     //Form to add a new event
     createNewEventForm () {
+        var today = new Date()                    
+            today = `${today.getFullYear()}-${(today.getMonth()+ 1) > 9 ? "" + (today.getMonth()+ 1): "0" + (today.getMonth()+ 1)}-${today.getDate() > 9 ? "" + today.getDate(): "0" + today.getDate()}`
         const newEventForm =`
         <form id="event-form" class="shadow-lg p-3 mb-5 rounded">
             <fieldset>
@@ -17,7 +19,7 @@ const event_domPrinter = {
             </fieldset>
             <fieldset>
             <label for="event-date">Event date and time:</label>
-            <input type="datetime-local" id="event-date" placeholder="Event Date"><span style="color:tomato;"><em> Required</em></span>
+            <input type="datetime-local" id="event-date" value="${today}T12:00" placeholder="Event Date"><span style="color:tomato;"><em> Required</em></span>
             </fieldset>
             <fieldset>
             <label for="event-location">Event location:</label>
