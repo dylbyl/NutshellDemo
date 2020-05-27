@@ -9,8 +9,7 @@ const event_eventListener = {
                 event_domPrinter.createPageHeader()
                 event_domPrinter.createAddEventButton()
                 event_domPrinter.createEventsContainer()
-                event_apiManager.getAllEvents()
-                // event_apiManager.filterEventsByMonth()
+                event_apiManager.getEventsByMonth()
             }
         })
     },

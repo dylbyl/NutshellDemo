@@ -257,16 +257,6 @@
       "id": 55
     },
     {
-      "articleId": 11,
-      "tagId": 1,
-      "id": 56
-    },
-    {
-      "articleId": 12,
-      "tagId": 1,
-      "id": 57
-    },
-    {
       "articleId": 13,
       "tagId": 1,
       "id": 58
@@ -383,7 +373,7 @@
       "time": "12:00",
       "location": "Community Center",
       "description": "Local High School holding a blood drive",
-      "userId": 4
+      "userId": "4"
     },
     {
       "id": 10,
@@ -454,15 +444,6 @@
       "description": "Surprise birthday party for a friend",
       "id": 18,
       "userId": 4
-    },
-    {
-      "id": 29,
-      "name": "Work",
-      "date": "2020-05-27",
-      "time": "21:00",
-      "location": "ZOOOM!",
-      "description": "Work on finishing touches for group project",
-      "userId": "4"
     },
     {
       "name": "Group Project Work",

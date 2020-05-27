@@ -6,6 +6,7 @@ const event_apiManager = {
         return fetch(`http://localhost:8088/events?userId=${sessionStorage.getItem("userId")}`)
         .then(r => r.json())
         .then(parsedEvents => {
+
             //Sort date and time in ascending order
             parsedEvents.sort((a, b) => {          
                    if (a.date === b.date) {
@@ -14,10 +15,11 @@ const event_apiManager = {
                    return a.date > b.date ? 1 : -1;
                 });
 
-            parsedEvents.forEach(event =>{
-                //Create today's date
-                var today = new Date()
-                today = `${today.getFullYear()}-${(today.getMonth()+ 1) > 9 ? "" + (today.getMonth()+ 1): "0" + (today.getMonth()+ 1)}-${today.getDate() > 9 ? "" + today.getDate(): "0" + today.getDate()}`
+            //Create today's date
+            var today = new Date()                    
+            today = `${today.getFullYear()}-${(today.getMonth()+ 1) > 9 ? "" + (today.getMonth()+ 1): "0" + (today.getMonth()+ 1)}-${today.getDate() > 9 ? "" + today.getDate(): "0" + today.getDate()}`
+
+            parsedEvents.forEach(event => {
                 //Print events only if they occur today or in the future
                 if(event.date >= today){
                     event_domPrinter.printEvents(event)
@@ -36,7 +38,7 @@ const event_apiManager = {
             body: JSON.stringify(event_domPrinter.addNewEvent())
         }).then(() => {
             event_domPrinter.clearEvents()
-            event_apiManager.getAllEvents()
+            event_apiManager.getEventsByMonth()
         })
     },
     //Fetch to delete an event
@@ -46,7 +48,7 @@ const event_apiManager = {
             method: "DELETE",
         }).then(() => {
             event_domPrinter.clearEvents()
-            event_apiManager.getAllEvents()
+            event_apiManager.getEventsByMonth()
         }) 
     },
     //Fetch to build edit form for event
@@ -67,11 +69,11 @@ const event_apiManager = {
             body: JSON.stringify(event_domPrinter.saveEditedEventObject(id))
         }).then(() => {
             event_domPrinter.clearEvents()
-            event_apiManager.getAllEvents()
+            event_apiManager.getEventsByMonth()
         }) 
     },
-    filterEventsByMonth(){
-        return fetch(`http://localhost:8088/events/`)
+    getEventsByMonth(){
+        return fetch(`http://localhost:8088/events/?userId=${sessionStorage.getItem("userId")}`)
         .then(r => r.json())
         .then(parsedEvents => {
             const monthNames = {
@@ -88,26 +90,41 @@ const event_apiManager = {
                 11:"November", 
                 12:"December"
             }
-            const monthNamesArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-            const dateArray = parsedEvents.map(event => event.date)
-            const monthArray = dateArray.sort((a,b) => a.split("-")[1] - b.split("-")[1]).map(date => parseInt(date.split("-")[1]))
-            console.log(monthArray)
-            console.log(monthNames["January"])
-            console.log(monthNamesArray[1])
-            console.log(monthArray[0])
-            for (let i = 0; i < parsedEvents.length; i++){
-                for (let n = 0; i < monthArray.length; n++){
-                    console.log("Inside second for loop")
-                    // if(monthNames[n + 1] === monthArray[i]){
-                    //     console.log(`${monthNames[n + 1]}`)
-                    // }
-                // if(monthArray[i] === monthNames[i]){
-                //     console.log(`${monthArray[i]} equals ${monthNames[n]}`)
-                //     document.querySelector("#events-container").innerHTML += `${monthNames[n]}`
-                // }
+            //Sort date and time in ascending order
+            parsedEvents.sort((a, b) => {          
+                if (a.date === b.date) {
+                   return parseInt(a.time) - parseInt(b.time);
                 }
+                return a.date > b.date ? 1 : -1;
+             });
+
+            //Create today's date
+            var today = new Date()                    
+            today = `${today.getFullYear()}-${(today.getMonth()+ 1) > 9 ? "" + (today.getMonth()+ 1): "0" + (today.getMonth()+ 1)}-${today.getDate() > 9 ? "" + today.getDate(): "0" + today.getDate()}`
+
+            // const monthArray = parsedEvents.map(event => event.date).sort((a,b) => a.split("-")[1] - b.split("-")[1]).map(date => parseInt(date.split("-")[1]))
+
+            for (const monthNum in monthNames){
+                const eventsPerMonth = parsedEvents.filter(array => {
+                    let perMonth = false
+
+                    if(parseInt(array.date.split("-")[1]) === parseInt(monthNum)){
+                        perMonth = true
+                    }
+                    return perMonth
+                })
+                console.log(eventsPerMonth)
+                console.log(eventsPerMonth.length)
+                console.log(monthNames[monthNum])
+
+                eventsPerMonth.forEach(event => {
+                    if(event.date >= today){
+                        event_domPrinter.printAccordion(monthNames[monthNum], event, eventsPerMonth.length)
+                    } 
+                })
             }
         })
+                
     }
 }
 

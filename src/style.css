@@ -56,9 +56,6 @@
     width: 10vw;
     height: 5vh;
 }
-
-
-
 #output-container{
     margin: 1em;
     padding: 1em;
@@ -78,7 +75,6 @@ article:first-child{
 }
 #event-form{
     border: 7px ridge rgb(0, 195, 255);
-    margin: 1em;
     padding: 1em;
     font-weight: bold;
 }
@@ -86,7 +82,8 @@ article:first-child{
     margin-left: 37%;
 }
 #add-event-btn, #cancel-btn{
-    margin-left: 10em;
+    margin-top: -2em;
+    margin-left: 8em;
 }
 .col.event-form-column{
     margin: 1em;
@@ -95,8 +92,6 @@ article:first-child{
 #events-container{
     margin: 1em;
     padding: 2em;
-    overflow-y: scroll;
-    height: 80%;
 }
 .col.event-container-column {
     height: 65vh;

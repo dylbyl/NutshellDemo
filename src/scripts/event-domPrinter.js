@@ -43,7 +43,7 @@ const event_domPrinter = {
     },
     //Function to print each event card to the DOM
     printEvents(events){
-        const eventsHTMLString = document.querySelector("#events-container").innerHTML += `
+        const eventsHTMLString = `
         <article id="event-card" class="row event-card shadow p-3 mb-5 rounded">
             <div id="event-card-${events.id}" >
                 <h2>${events.name}</h2>
@@ -115,6 +115,28 @@ const event_domPrinter = {
             userId: sessionStorage.getItem("userId")
         }
         return editedEventObject
+    },
+    printAccordion(month, printEvent, length){
+        const monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        let monthsHTMLString = `
+            <div class="accordion" id="monthAccordion">
+                <div class="card">                        
+                <div class="card-header" id="heading-${month}">
+                    <h2 class="mb-0">
+                        <button id = "event-month-${month}"class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse-${month}" aria-expanded="false" aria-controls="collapse-${month}">
+                            ${month} (${length})
+                        </button>
+                    </h2>
+                </div>
+                    <div id="collapse-${month}" class="collapse multi-collapse" aria-labelledby="heading-${month}" data-parent="#monthAccordion">
+                    <div class="card-body">
+                        ${event_domPrinter.printEvents(printEvent)}
+                    </div>
+                    </div>
+                </div>
+            </div>`
+
+        document.querySelector("#events-container").innerHTML += monthsHTMLString
     }
 }
 
