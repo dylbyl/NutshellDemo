@@ -102,8 +102,6 @@ const event_apiManager = {
             var today = new Date()                    
             today = `${today.getFullYear()}-${(today.getMonth()+ 1) > 9 ? "" + (today.getMonth()+ 1): "0" + (today.getMonth()+ 1)}-${today.getDate() > 9 ? "" + today.getDate(): "0" + today.getDate()}`
 
-            // const monthArray = parsedEvents.map(event => event.date).sort((a,b) => a.split("-")[1] - b.split("-")[1]).map(date => parseInt(date.split("-")[1]))
-
             for (const monthNum in monthNames){
                 const eventsPerMonth = parsedEvents.filter(event => {
                     let perMonth = false

@@ -120,7 +120,6 @@ const event_domPrinter = {
         return editedEventObject
     },
     printAccordion(month, printEvents, length){
-        const monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
         let monthsHTMLString = `
             <div class="accordion" id="monthAccordion">
                 <div class="card">                        
