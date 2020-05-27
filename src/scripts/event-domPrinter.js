@@ -43,18 +43,21 @@ const event_domPrinter = {
     },
     //Function to print each event card to the DOM
     printEvents(events){
-        const eventsHTMLString = `
+        let eventsHTMLString = ``
+        events.forEach(event =>{
+        eventsHTMLString += `
         <article id="event-card" class="row event-card shadow p-3 mb-5 rounded">
-            <div id="event-card-${events.id}" >
-                <h2>${events.name}</h2>
-                <h4>Date: ${events.date}</h4>
-                <h5>Time: ${events.time}</h5>
-                <h5>Location: ${events.location}</h5>
-                <p>Description: ${events.description}</p>
-                <button id="delete-btn-${events.id}" class="btn btn-info">Delete Event</button>
-                <button id="edit-btn-${events.id}" class="btn btn-info">Edit Event</button>
+            <div id="event-card-${event.id}" >
+                <h2>${event.name}</h2>
+                <h4>Date: ${event.date}</h4>
+                <h5>Time: ${event.time}</h5>
+                <h5>Location: ${event.location}</h5>
+                <p>Description: ${event.description}</p>
+                <button id="delete-btn-${event.id}" class="btn btn-info">Delete Event</button>
+                <button id="edit-btn-${event.id}" class="btn btn-info">Edit Event</button>
             </div>
         </article>`
+        })
         return eventsHTMLString;
     },
     //Function to create an object from the values inputted into the add new event form
@@ -116,7 +119,7 @@ const event_domPrinter = {
         }
         return editedEventObject
     },
-    printAccordion(month, printEvent, length){
+    printAccordion(month, printEvents, length){
         const monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
         let monthsHTMLString = `
             <div class="accordion" id="monthAccordion">
@@ -130,7 +133,7 @@ const event_domPrinter = {
                 </div>
                     <div id="collapse-${month}" class="collapse multi-collapse" aria-labelledby="heading-${month}" data-parent="#monthAccordion">
                     <div class="card-body">
-                        ${event_domPrinter.printEvents(printEvent)}
+                        ${event_domPrinter.printEvents(printEvents)}
                     </div>
                     </div>
                 </div>

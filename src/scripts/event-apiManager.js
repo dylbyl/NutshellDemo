@@ -105,10 +105,10 @@ const event_apiManager = {
             // const monthArray = parsedEvents.map(event => event.date).sort((a,b) => a.split("-")[1] - b.split("-")[1]).map(date => parseInt(date.split("-")[1]))
 
             for (const monthNum in monthNames){
-                const eventsPerMonth = parsedEvents.filter(array => {
+                const eventsPerMonth = parsedEvents.filter(event => {
                     let perMonth = false
 
-                    if(parseInt(array.date.split("-")[1]) === parseInt(monthNum)){
+                    if(event.date >= today && parseInt(event.date.split("-")[1]) === parseInt(monthNum) ){
                         perMonth = true
                     }
                     return perMonth
@@ -116,12 +116,9 @@ const event_apiManager = {
                 console.log(eventsPerMonth)
                 console.log(eventsPerMonth.length)
                 console.log(monthNames[monthNum])
-
-                eventsPerMonth.forEach(event => {
-                    if(event.date >= today){
-                        event_domPrinter.printAccordion(monthNames[monthNum], event, eventsPerMonth.length)
-                    } 
-                })
+                if(eventsPerMonth.length !== 0){
+                    event_domPrinter.printAccordion(monthNames[monthNum], eventsPerMonth, eventsPerMonth.length)
+                }
             }
         })
                 
