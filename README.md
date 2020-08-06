@@ -26,5 +26,5 @@ The Events page allows you to jot down future events sot aht you've got a handy 
 ## Tasks - Created by teammate
 The Tasks page allows you to keep a to-do list, as well as a list of Completed Tasks. Click the "New Task" button then input a task name and completion date to add a task to your list. Then, you can click to "Task is Complete" checkbox to move a task to the Completed list. The percentage of complete tasks should automatically update when you do so.
 
-#Author
+# Author
 This Nutshell demo was initially created by a group at NewForce, with login/register/logout features and the News page created by Dylan Bishop. You can view his [GitHub profile here](https://github.com/dylbyl/).
