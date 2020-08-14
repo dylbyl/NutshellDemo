@@ -4,9 +4,14 @@
 Nutshell is a "one-stop productivity dashboard," produced as a part of the NewForce curriculum. With it, you can register an account and login, save news articles for later viewing, jot down future events and tasks, and even chat with other users. Nutshell was a group project, of which I helped create the login/register/logout process, the home screen, and the entire News page. 
 
 ## Installing and running Nutshell
-Visit the [Nutshell GitHub page](https://github.com/dylbyl/NutshellDemo/) and clone the repository to a local branch. Open this directory in a GitBash terminal. In the root folder, run "npm install" to ensure all frameworks used are installed. Run "npm install json-server" to install JSON Server. Navigate to the api folder of the project, then run "npx json-server -p 8088 -w nutshell.json" to launch the JSON server.
-
-Open the src folder of the project in a code editor capable of running HTML/CSS/JavaScript files, preferably Visual Studio Code with the LiveServer extension installed. Clicking "Go Live" at the bottom of such an editor will open Nutshell in a new browser window.
+1. Visit the [Nutshell GitHub page](https://github.com/dylbyl/NutshellDemo/) and clone the repository to a local branch. 
+2. Open this new directory in a GitBash terminal. 
+3. In the root folder, run `npm install` to ensure all frameworks used are installed. 
+4. Run `npm install json-server` to install JSON Server. 
+5. Navigate to the api folder of the project.
+6. Run `npx json-server -p 8088 -w nutshell.json` to launch the JSON server.
+7. Open the src folder of the project in a code editor capable of running HTML/CSS/JavaScript files, preferably Visual Studio Code with the LiveServer extension installed. 
+8. Clicking "Go Live" at the bottom of such an editor will open Nutshell in a new browser window.
 
 # Testing the Web App
 ## Accounts
